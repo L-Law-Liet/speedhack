@@ -19,8 +19,10 @@ Vue.use(VModal);
 
 const app = document.getElementById('app');
 Vue.component('welcome-layout', require('./Layouts/WelcomeLayout.vue').default);
+Vue.component('student-layout', require('./Layouts/StudentLayout.vue').default);
 Vue.component('modal-form', require('./Speedhack/Components/Details/ModalForm').default);
 Vue.component('modal-success', require('./Speedhack/Components/Details/ModalSuccess').default);
+
 
 new Vue({
     render: (h) =>

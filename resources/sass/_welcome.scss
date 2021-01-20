@@ -117,6 +117,10 @@ a{
 	}
 }
 
+.course .progress .progress-bar{
+	background-color: #F8CC45;
+}
+
 .tab-course .nav-tabs .nav-link{
 	display: flex;
 	align-items: center;
@@ -129,3 +133,104 @@ button:active{
 button:focus{
 	outline: none !important;
 }
+
+.empty-wrap{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.title{
+		font-size: 22px;
+		font-family: 'Inter', sans-serif;
+		margin-bottom: 24px;
+	}
+	.btn-main{
+		padding: 12px 38px;
+	}
+}
+
+.class-carousel-wrap .slick-prev, .class-carousel-wrap .slick-next{
+   top: -30px;
+   display: flex;
+   align-items: center;
+}
+.class-carousel-wrap .slick-prev::after{
+   	content: 'Предыдущий';
+   	font-size: 16px;
+   	color: #1680E2;
+   	background-image: url('/images/icons/chevron-left.svg');
+   	background-repeat: no-repeat;
+   	background-position: top left;
+   	padding-left: 20px;
+}
+.class-carousel-wrap .slick-prev::before{
+	display: none;
+}
+
+
+
+.class-carousel-wrap .slick-next::after{
+  	content: 'Следующий';
+   
+   	font-size: 16px;
+   	color: #1680E2;
+   	background-image: url('/images/icons/chevron-left1.svg');
+   	background-repeat: no-repeat;
+   	background-position: top right;
+   	padding-right: 20px;
+}
+.class-carousel-wrap .slick-next::before{
+	display: none;
+}
+
+
+
+.class-carousel-wrap .slick-prev.slick-disabled:after, .class-carousel-wrap .slick-next.slick-disabled:after{
+	display: none;
+	opacity: 0;
+}
+.class-carousel-wrap .slick-prev.slick-disabled, .class-carousel-wrap .slick-next.slick-disabled{
+	display: none;
+}
+.class-carousel-wrap .slick-next{
+	right: 96px;
+}
+.class-carousel-wrap .slick-prev{
+  	left: 0px;
+}
+.week-slider .slick-prev, .week-slider .slick-next{
+	z-index: 20px;
+}
+.week-slider .slick-prev::after{
+	content: "dwe";
+	background-image: url('/images/icons/chevron-left.svg');
+   	background-repeat: no-repeat;
+   	background-position: top left;
+   	background: red;
+
+}
+.week-slider .slick-prev::before{
+	display: none;
+}
+.week-slider .slick-next::before{
+	display: none;
+}
+.week-slider .slick-next::after{
+	content: "edwde";
+   	background-image: url('/images/icons/chevron-left1.svg');
+   	background-repeat: no-repeat;
+   	background-position: top right;
+}
+
+.week-slider.slick-prev.slick-disabled{
+	display: none;
+}
+
+.week-slider.slick-next.slick-disabled{
+	display: none;
+}
+
+
+
+

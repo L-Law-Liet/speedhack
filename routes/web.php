@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\TestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +26,17 @@ Route::get('/news', [HomeController::class, 'news'])->name('news');
 Route::get('/news/item', [HomeController::class, 'news_item'])->name('news_item');
 Route::get('/comments', [HomeController::class, 'comments'])->name('comments');
 Route::get('/error', [HomeController::class, 'error'])->name('error');
+
+Route::get('/account/courses', [AccountController::class, 'courses'])->name('account.courses');
+Route::get('/account/course', [AccountController::class, 'course'])->name('account.course');
+Route::get('/account/lesson', [AccountController::class, 'lesson'])->name('account.lesson');
+Route::get('/account/calendar', [AccountController::class, 'calendar'])->name('account.calendar');
+Route::get('/account/events', [AccountController::class, 'events'])->name('account.events');
+
+Route::get('/test/one', [TestController::class, 'one'])->name('test.one');
+Route::get('/test/two', [TestController::class, 'two'])->name('test.two');
+Route::get('/test/three', [TestController::class, 'three'])->name('test.three');
+Route::get('/test/four', [TestController::class, 'four'])->name('test.four');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');

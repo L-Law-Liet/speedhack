@@ -70,7 +70,7 @@
 <style scoped>
 	.wrap-test{
 		display: flex;
-		padding: 0px 40px;
+		padding: 0px 60px;
 	}
 	.wrap-static{
 		padding-right: 40px;

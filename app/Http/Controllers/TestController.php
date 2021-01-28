@@ -26,4 +26,16 @@ class TestController extends Controller
     {   
        return Inertia::render('Speedhack/Test/Four');
     }
+
+    public function five()
+    {   
+       return Inertia::render('Speedhack/Test/Five');
+    }
+
+    public function result()
+    {   
+       return Inertia::render('Speedhack/Test/Result');
+    }
+
+     
 }

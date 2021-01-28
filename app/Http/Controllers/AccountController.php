@@ -17,7 +17,7 @@ class AccountController extends Controller
        return Inertia::render('Speedhack/Student/Course');
     }
 
-     public function lesson()
+    public function lesson()
     {   
        return Inertia::render('Speedhack/Student/Lesson');
     }
@@ -35,4 +35,52 @@ class AccountController extends Controller
        
         return Inertia::render('Speedhack/Student/Events', compact('calendars'));
     }
+
+    public function homework()
+    {   
+       return Inertia::render('Speedhack/Student/Homework');
+    }
+
+    public function materials()
+    {   
+       return Inertia::render('Speedhack/Student/Materials');
+    }
+
+    public function grammar()
+    {   
+      return Inertia::render('Speedhack/Student/Grammar');
+    }
+
+    public function vocabulary(){
+      return Inertia::render('Speedhack/Student/Vocabulary');
+    }
+
+    public function profile(){
+      return Inertia::render('Speedhack/Student/Profile');
+    }
+
+    public function news(){
+      return Inertia::render('Speedhack/Student/News');
+    }
+
+    public function itemNews(){
+      return Inertia::render('Speedhack/Student/ItemNews');
+    }
+
+    public function eventItems(){
+      return Inertia::render('Speedhack/Student/ItemEvent');
+    }
+
+    public function buyCourses(){
+      return Inertia::render('Speedhack/Student/BuyCourses');
+    }
+
+    public function avatar_save(Request $request)
+    {
+        $path = $request->file('file')->store('public/Avatar'); 
+        return response()->json([
+            'nameFile' => '/storage'.substr($path, 6),
+        ]);
+    }
+
 }

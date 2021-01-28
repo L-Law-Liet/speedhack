@@ -143,6 +143,8 @@
 	.bg-account{
 		background: #F5F7F8;
 		width: 100%;
+    height: 100%;
+    
 	}
 	.account-title{
 		font-family: "Inter-Bold", sans-serif;

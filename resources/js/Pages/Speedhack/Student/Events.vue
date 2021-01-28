@@ -2,7 +2,7 @@
     <student-layout>
     	<section class="bg-account">
 	    	<div class="block-wrap">
-	    		<div class="week-slider-wrap">
+    		<div class="week-slider-wrap">
 	    		<button class="arrow-slider left" @click="showPrev" v-if="activeClass == 2"><img src="/images/icons/chevron-left-left.svg"></button>
 	    		<div class="week week-slider">
 	    		
@@ -19,8 +19,74 @@
 		    	
 		    	</div>
 		    	<button class="arrow-slider right" @click="showNext" v-if="activeClass !== 29"><img src="/images/icons/chevron-left-right.svg"></button>
-		    	</div>
-	    	</div>	
+	    	</div>
+	    	
+	    	<div class="cards">
+                <div class="card-item">
+                   		<div class="date">
+                            <div class="time">
+                                <b>12:30</b>
+                                <span>50 min</span>
+                            </div>
+                       </div>
+                        <div class="content">
+                            <div class="name_img">
+                                <div class="ellipse"> <img src="/images/users/teacher-1.png" alt=""></div>
+                                <div class="name">
+                                    <span>Ведущий</span>
+                                    <p>Антон Семечков</p>
+                                </div>
+                            </div>
+                            <div class="mess">
+                                <h5>Happy New Year</h5>
+                                <span>Elementary</span>
+                                <p>The year is almost over. Let's talk about this 
+                                    past year and what happened in your life and in the world. 
+                                    When he was small he liked to take everything to pieces. 
+                                    My grandmother told me a story that once.</p>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <a href="#" class="add">Записаться</a>
+                            <br>
+                            <span>4 места</span>
+                        </div>
+                    
+    			</div>
+    			 <div class="card-item">
+                  
+                        <div class="date">
+                            <div class="time">
+                                <b>12:30</b>
+                                <span>50 min</span>
+                            </div>
+                       </div>
+                        <div class="content">
+                            <div class="name_img">
+                                <div class="ellipse"> <img src="/images/users/teacher-1.png" alt=""></div>
+                                <div class="name">
+                                    <span>Ведущий</span>
+                                    <p>Антон Семечков</p>
+                                </div>
+                            </div>
+                            <div class="mess">
+                                <h5>Happy New Year</h5>
+                                <span>Elementary</span>
+                                <p>The year is almost over. Let's talk about this 
+                                    past year and what happened in your life and in the world. 
+                                    When he was small he liked to take everything to pieces. 
+                                    My grandmother told me a story that once.</p>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <a href="#" class="add active">Записаться</a>
+                            <br>
+                            <span>4 места</span>
+                        </div>
+                    </div>
+    			
+                </div>
+            </div>
     	</section>
     </student-layout>
 </template>
@@ -143,7 +209,6 @@
 		font-family: "Inter", sans-serif;
 	    font-weight: 500;
 	    font-size: 18px;
-	    line-height: 158.52%;
 	    color: #050A1C;
 	}
 	.day.active span{
@@ -156,6 +221,7 @@
 		padding-right: 35px;
 		margin-left: -35px;
 		margin-right: -35px;
+		margin-bottom: 30px;
 	}
 	.arrow-slider{
 		position: absolute;
@@ -170,4 +236,154 @@
 	.arrow-slider.right{
 		right: 0px;
 	}
+
+
+
+
+
+	.card-item {
+		display: flex;
+		margin-bottom: 30px;
+	    background: #FFFFFF;
+	    border: 1px solid #DFDFDF;
+	    box-sizing: border-box;
+	    box-shadow: 0px 4px 16px rgba(110, 120, 130, 0.12);
+	    border-radius: 8px;
+	    padding: 26px 28px;
+	} 
+
+	.card-item .date {
+	    width: 20%;
+	    display: flex;
+	    border-right: 1px solid #DFDFDF;
+	    margin-right: 20px;
+	}
+
+	.card-item  .time {
+	    display: flex;
+	    width: 100%;
+	    flex-direction: column;
+	    align-items: center;
+	    margin: 0 auto;
+	    justify-content: center;
+	}
+
+	.card-item  .time b {
+	    font-family: "Inter-Bold", sans-serif;
+	    font-size: 32px;
+	   	color: #050A1C;
+	}
+	.card-item .time span {
+	    font-family: "Inter", sans-serif;
+		font-size: 18px;
+		color: #7B838B;
+    }
+
+    /*.card-item .vl {
+	    border-left: 1px solid #DFDFDF;
+	    height: auto;
+	    margin-right: 12%;
+	  }*/
+
+	.card-item .content {
+	    width: 80%;
+	    margin: 0 auto;
+	} 
+
+	.card-item .name_img {
+	    display: flex;
+	    margin-bottom: 12px;
+	}
+	.card-item .name_img .ellipse{
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.card-item .name_img .ellipse img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.card-item .name {
+	    margin-left: 16px;
+	}
+
+	.card-item .name span {
+	   	font-family: "Inter", sans-serif;
+	    font-size: 14px;
+	   	color: #7B838B;
+	}
+
+	.card-item .name p {
+	    font-family: "Inter", sans-serif;
+		font-weight: 500;
+	    font-size: 18px;
+		color: #050A1C;
+		margin-bottom: 0px;
+	}
+
+	.card-item .mess h5 {
+	    font-family: "Inter", sans-serif;
+	    font-weight: 600;
+	    font-size: 18px;
+	   	color: #050A1C;
+	}
+
+	.card-item .mess span {
+	    font-family: "Inter", sans-serif;
+		font-size: 16px;
+	    color: #1B5AEC;
+	}
+
+	.card-item .mess p {
+	    font-family: "Inter", sans-serif;
+	   	font-size: 16px;
+	    color: #7B838B;
+	    margin-bottom: 0px;
+	}
+
+	.card-item .button {
+	    width: 30%;
+	    align-items: center;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	}
+
+
+	.card-item .add {
+	    background: #F2994A;
+	    border-radius: 8px;
+	    padding: 10px 30px;
+	    font-family: "Inter", sans-serif;
+	   	font-size: 12px;
+	    color: #FFFFFF;
+	}
+	.card-item .add.active {
+		border: 1.6px solid #F2994A;
+		background-color: #fff;
+		color: #F2994A;
+	}
+	.card-item .button span {
+	    font-family: "Inter", sans-serif;
+	    font-weight: 400;
+	    font-size: 15px;
+	   	color: #7B838B;
+	}
+
+	
+
+	.card-item .add:hover {
+	    text-decoration: none;
+	    color: #FFFFFF;
+	    background: #f0913e;
+	}
+
+	.card-item .add2:hover {
+	    text-decoration: none;
+	    color: #FFFFFF;
+	    background: #F2994A;
+	}
+
 </style>

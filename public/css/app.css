@@ -18376,3 +18376,45 @@ button:focus {
 .week-slider.slick-next.slick-disabled {
   display: none;
 }
+
+.vc-arrow {
+  background: rgba(208, 208, 208, 0.56);
+  border-radius: 12px !important;
+  padding: 0px 4px;
+}
+
+.vc-header {
+  padding: 10px 20px 18px !important;
+}
+
+.vc-arrows-container {
+  padding: 8px 20px !important;
+}
+
+.tab-course-account .tab-content {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.tab-course-account .nav-tabs .nav-link {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.tab-course-account .nav-tabs .nav-link.active, .tab-course-account .nav-tabs .nav-item.show .nav-link {
+  background-color: transparent;
+}
+
+.tab-course-account .nav-tabs {
+  justify-content: left;
+  padding-left: 60px;
+  padding-right: 60px;
+  width: auto;
+  border-bottom: 1px solid #E0E3EB;
+}
+
+.tab-course-account .nav-tabs .nav-link {
+  padding: 10px 2px;
+  margin-right: 30px;
+}

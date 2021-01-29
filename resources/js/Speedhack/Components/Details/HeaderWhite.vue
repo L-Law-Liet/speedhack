@@ -7,10 +7,10 @@
 				</a>
 
 				<ul class="links">
-					<li class="item"><a href="#">Новости</a></li>
-					<li class="item"><a href="#">Курсы</a></li>
-					<li class="item"><a href="#">Стать учителем</a></li>
-					<li class="item"><a href="#"> <img src="/images/icons/log-in-black.svg"> Войти</a></li>
+					<li class="item"><a href="/news">Новости</a></li>
+					<li class="item"><a href="/all/courses">Курсы</a></li>
+					<li class="item"><a href="/teacher">Стать учителем</a></li>
+					<li class="item"><a href="/login/main"> <img src="/images/icons/log-in-black.svg"> Войти</a></li>
 				</ul>
 			</div>
 		</div>

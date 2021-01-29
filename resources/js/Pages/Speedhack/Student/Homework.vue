@@ -10,9 +10,9 @@
 	        <div class="container card-wrap">
 	        	<div class="row">
 	        		<div class="col-12 col-md-4">
-	        			<div class="card-homework">
+	        			<a href="/test/one" class="card-homework">
 	        				<div class="img-wrap">
-	        					<img class="card-img-top" src="images/ilustration/card_image1.svg" alt="Card image cap">
+	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
 	        				</div>
 			                <div class="card-body">
 			                    <span class="subject_title">
@@ -20,13 +20,85 @@
 			                    </span>
 			                    <a href="#" class="content-text-wrap">
 			                        <p class="card-text">
-			                            Present simple
+			                            Present simple 1
 			                        </p>
 			                       	<img src="/images/icons/arrow-right.svg" alt="arrow" class="arrow">
 			                    </a>
 			                </div>
-			            </div>
+			            </a>
 	        		</div>	
+	        		<div class="col-12 col-md-4">
+	        			<a href="/test/two" class="card-homework">
+	        				<div class="img-wrap">
+	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
+	        				</div>
+			                <div class="card-body">
+			                    <span class="subject_title">
+			                        Название урока
+			                    </span>
+			                    <a href="#" class="content-text-wrap">
+			                        <p class="card-text">
+			                            Present simple 2
+			                        </p>
+			                       	<img src="/images/icons/arrow-right.svg" alt="arrow" class="arrow">
+			                    </a>
+			                </div>
+			            </a>
+	        		</div>	
+	        		<div class="col-12 col-md-4">
+	        			<a href="/test/three" class="card-homework">
+	        				<div class="img-wrap">
+	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
+	        				</div>
+			                <div class="card-body">
+			                    <span class="subject_title">
+			                        Название урока
+			                    </span>
+			                    <a href="#" class="content-text-wrap">
+			                        <p class="card-text">
+			                            Present simple 3
+			                        </p>
+			                       	<img src="/images/icons/arrow-right.svg" alt="arrow" class="arrow">
+			                    </a>
+			                </div>
+			            </a>
+	        		</div>
+	        		<div class="col-12 col-md-4">
+	        			<a href="/test/four" class="card-homework">
+	        				<div class="img-wrap">
+	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
+	        				</div>
+			                <div class="card-body">
+			                    <span class="subject_title">
+			                        Название урока
+			                    </span>
+			                    <a href="#" class="content-text-wrap">
+			                        <p class="card-text">
+			                            Present simple 4
+			                        </p>
+			                       	<img src="/images/icons/arrow-right.svg" alt="arrow" class="arrow">
+			                    </a>
+			                </div>
+			            </a>
+	        		</div>		
+	        		<div class="col-12 col-md-4">
+	        			<a href="/test/five" class="card-homework">
+	        				<div class="img-wrap">
+	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
+	        				</div>
+			                <div class="card-body">
+			                    <span class="subject_title">
+			                        Название урока
+			                    </span>
+			                    <a href="#" class="content-text-wrap">
+			                        <p class="card-text">
+			                            Present simple 5
+			                        </p>
+			                       	<img src="/images/icons/arrow-right.svg" alt="arrow" class="arrow">
+			                    </a>
+			                </div>
+			            </a>
+	        		</div>
 	        		<div class="col-12 col-md-4">
 	        			<div class="card-homework">
 	        				<div class="dark-wrap">
@@ -36,7 +108,7 @@
 		                    </div>
 
 	        				<div class="img-wrap">
-	        					<img class="card-img-top" src="images/ilustration/card_image1.svg" alt="Card image cap">
+	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
 	        				</div>
 			                <div class="card-body">
 			                    <span class="subject_title">
@@ -105,6 +177,7 @@
 		margin-bottom: 30px;
 	}
 	.card-homework{
+		display: block;
 		position: relative;
 		border-radius: 8px;
 		overflow: hidden;

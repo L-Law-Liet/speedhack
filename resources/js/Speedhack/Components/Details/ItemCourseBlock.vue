@@ -1,5 +1,5 @@
 <template>
-	<a href="/" class="course-block">
+	<a href="/course" class="course-block">
         <span class="text"> {{ course.text }}</span>
         <div class="wrap">
             <p class="title">{{ course.title }}</p>

@@ -35,7 +35,7 @@
 							  	Запомнить меня
 							</label>
 							<div class="btn-wrap">
-								<a href="/" class="login-btn">Войти</a>
+								<a href="/login/main" class="login-btn">Войти</a>
 								<button class="btn-main">Начать курс</button>
 							</div>	
 						</form>	

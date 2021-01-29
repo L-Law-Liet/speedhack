@@ -22,7 +22,7 @@
 		    			<template v-for="item in events_curse">
 			    			<div class="calendar-info" v-if="item.customData.title !== 'Today'">
 			    				<div class="header-wrap">
-			    					<span class="date"> {{ item.dates }} </span>
+			    					<span class="date"> {{ item.customData.date }} </span>
 			    					<span class="title">{{ item.customData.title }}</span>
 			    				</div>
 			    				<div class="body-wrap">
@@ -94,6 +94,7 @@
 				            phone: '+7 777 123 45 67',
 				            email: 'kuanysheva.laura@gmail.com',
 				            class: 'yellow',
+				            date: '14 Декабря, 2020'
 				        },
 			        },
 			        {
@@ -107,6 +108,7 @@
 				            phone: '+7 777 123 45 67',
 				            email: 'kuanysheva.laura@gmail.com',
 				            class: 'yellow',
+				            date: '08 Декабря, 2020'
 				        },
 			        },
 				],

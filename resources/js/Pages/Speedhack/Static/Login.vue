@@ -19,7 +19,7 @@
 				</form>
 				<a href="" class="link">Забыли пароль?</a>
 				<div class="footer-form">
-					<p>Еще нет аккаунта? <a href="/">Зарегистрируйтесь</a> </p> 
+					<p>Еще нет аккаунта? <a href="/register/main">Зарегистрируйтесь</a> </p> 
 				</div>
 			</div>
 		</section>

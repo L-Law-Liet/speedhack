@@ -4,7 +4,7 @@
 			<div class="img">
 				<img :src="news.img">
 			</div>
-			<a :href="news.date" class="wrap-text">
+			<a href="/news/item" class="wrap-text">
 				<span class="date">{{ news.date }}</span>
 				<span class="title">{{ news.title }}</span>
 				<p class="text">{{ news.text }}</p>

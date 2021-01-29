@@ -62,7 +62,7 @@
                     </template>
                 </div>
 
-                <a href="/" class="btn-link">Посмотреть все отзывы</a>
+                <!-- <a href="/" class="btn-link">Посмотреть все отзывы</a> -->
             </div>
         </section>
 

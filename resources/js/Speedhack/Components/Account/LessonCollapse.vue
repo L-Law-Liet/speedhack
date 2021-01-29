@@ -30,6 +30,7 @@
 				    <ul class="lessons-list">
 				    	<template v-for="(item, i) in lesson.lessons">
 				    		<li :class="{'active': item.status == 'current' }">
+				    			<a href="/account/lesson">
 				    			<span class="lesson_title"> <b>{{ index + 1}}.{{ i + 1 }}</b> {{ item.title }}</span>
 
 				    			<div class="fasts">
@@ -48,7 +49,8 @@
 										<img src="/images/icons/pause-circle-white.svg" v-if="item.status == 'current'"> 
 										<img src="/images/icons/alert-circle.svg" v-if="item.status == 'wait'">
 									</div>
-				    			</div>	
+				    			</div>
+				    			</a>	
 				    		</li>
 				    	</template>
 				    </ul>
@@ -163,7 +165,7 @@
 		border-top: 1px solid #F1F2F2;
 		margin-bottom: 0px;
 	}
-	.lessons-list li{
+	.lessons-list li a{
 		padding: 22px 26px;
 		display: flex;
 		justify-content: space-between;

@@ -2,7 +2,7 @@
 	<header class="account-header">
 		<div class="indicator one">
 			<button class="btn-menu" @click="toggleClassAside"><img src="/images/icons/align-justify.svg"></button>
-			<div class="logo"><img src="/images/logo_2.png"></div>	
+			<a href="/" class="logo"><img src="/images/logo_2.png"></a>	
 			<div class="form-group search-inputs">
 			    <input type="text" class="form-control" placeholder="Поиск">
 			    <img src="/images/icons/search.svg" class="icon">

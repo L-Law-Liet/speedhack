@@ -2,7 +2,7 @@
 	<div class="container">
         <div class="row">
             <div class="col-md-4">
-                <a href="/" class="course-block">
+                <a href="/course" class="course-block">
                     <span class="text">Профессия</span>
                     <div class="wrap">
                         <p class="title">Английский язык</p>
@@ -15,7 +15,7 @@
             </div>   
 
             <div class="col-md-4">
-                <a href="/" class="course-block">
+                <a href="/course" class="course-block">
                     <span class="text">Профессия</span>
                     <div class="wrap">
                         <p class="title">Казахский язык</p>
@@ -28,7 +28,7 @@
             </div>  
 
             <div class="col-md-4">
-                <a href="/" class="course-block">
+                <a href="/course" class="course-block">
                     <span class="text">Профессия</span>
                     <div class="wrap">
                         <p class="title">Руский язык</p>
@@ -41,7 +41,7 @@
             </div> 
 
             <div class="col-md-4">
-                <a href="/" class="course-block">
+                <a href="/course" class="course-block">
                     <span class="text">Профессия</span>
                     <div class="wrap">
                         <p class="title">Физика</p>
@@ -54,7 +54,7 @@
             </div> 
 
             <div class="col-md-4">
-                <a href="/" class="course-block">
+                <a href="/course" class="course-block">
                     <span class="text">Профессия</span>
                     <div class="wrap">
                         <p class="title">Математика</p>
@@ -66,7 +66,7 @@
                 </a>
             </div> 
             <div class="col-md-4">
-                <a href="/" class="course-block">
+                <a href="/course" class="course-block">
                     <span class="text">Профессия</span>
                     <div class="wrap">
                         <p class="title">Химия</p>
@@ -79,7 +79,7 @@
             </div> 
         </div> 
         <div class="wrap-center">
-        	<a href="/" class="btn-show-more">Показать еще</a>
+        	<a href="/all/courses" class="btn-show-more">Показать еще</a>
         </div>   
     </div>
 </template>

@@ -25,7 +25,7 @@ export default {
     },
     data() {
         return {
-           activeClass: false
+           activeClass: true
         }
     },
     methods: {

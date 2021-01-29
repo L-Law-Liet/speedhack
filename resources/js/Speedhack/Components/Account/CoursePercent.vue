@@ -1,5 +1,5 @@
 <template>
-	<div class="course">
+	<a href="/account/course" class="course">
 		<div class="img">
 			<img :src="course.img">
 			<b-progress :value="course.percent" :max="100" class="mb-3"></b-progress>
@@ -9,7 +9,7 @@
 			<span class="title">{{ course.title }}</span>
 			<div class="lesson"><img src="/images/icons/book-open.svg"> {{ course.lessons }} уроков</div>
 		</div>
-	</div>
+	</a>
 </template>
 <script>
 	export default {
@@ -20,6 +20,7 @@
 </script>
 <style scoped>
 	.course{
+		display: block;
 		background: #FFFFFF;
 		box-shadow: 0px 4px 16px rgba(110, 120, 130, 0.12);
 		border-radius: 8px;

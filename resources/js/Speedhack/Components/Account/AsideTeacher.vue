@@ -15,7 +15,7 @@
 
 		<ul class="links-wrap">
 			<li>
-				<a href="" class="links-item active">
+				<a href="/teacher/courses" class="links-item active">
 					<div class="icon icon-1"></div>
 					<div class="text">
 						Мои курсы
@@ -24,7 +24,7 @@
 			</li>
 			
 			<li>
-				<a href="" class="links-item">
+				<a href="/account/calendar" class="links-item">
 					<div class="icon icon-3"></div>
 					<div class="text">
 						Мое расписание
@@ -32,7 +32,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="" class="links-item">
+				<a href="/teacher/homework" class="links-item">
 					<div class="icon icon-4"></div>
 					<div class="text">
 						Домашняя работа
@@ -41,7 +41,7 @@
 			</li>
 			
 			<li>
-				<a href="" class="links-item">
+				<a href="/account/profile" class="links-item">
 					<div class="icon icon-8"></div>
 					<div class="text">
 						Мой профиль

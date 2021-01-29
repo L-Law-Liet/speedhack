@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <div class="button">
-                            <a href="#" class="add">Записаться</a>
+                            <a href="/account/event/item" class="add">Записаться</a>
                             <br>
                             <span>4 места</span>
                         </div>

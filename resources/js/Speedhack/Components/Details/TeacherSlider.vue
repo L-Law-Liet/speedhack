@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="teacher-slider">
 				<div class="wrap-header">
-					<block-title 
+					<block-title
 		            title="Выбери курсы которые тебе нравится"
 		            subtitle="Онлайн программы, чтобы изучить один конкретный навык"
 		        	></block-title>
@@ -26,7 +26,7 @@
 					</template>
 				</VueSlickCarousel>
 			</div>
-		</div>	
+		</div>
 	</section>
 </template>
 <script>
@@ -39,7 +39,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
     props: {
-    
+
     },
 	components: {
       	VueSlickCarousel,

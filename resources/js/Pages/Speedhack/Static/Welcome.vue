@@ -12,15 +12,15 @@
                             <a class="btn-main" @click="showFormReguestModal">Начать курс</a>
                             <a @click="showSuccessModal" class="link-main">Посмотреть курсы</a>
                         </div>
-                    </div> 
+                    </div>
                     <div class="banner-img">
                         <img src="/images/ilustration/banner-1.png">
-                    </div>  
+                    </div>
                 </div>
             </div>
         </section>
 
-        <block-title 
+        <block-title
             title="Выбери курсы которые тебе нравится"
             subtitle="Онлайн программы, чтобы изучить один конкретный навык"
         ></block-title>
@@ -46,7 +46,7 @@ import FormRequest from '@/Speedhack/Components/Details/FormRequest';
 
 export default {
     props: {
-      
+
     },
     components: {
         HeaderWelcome,
@@ -60,7 +60,7 @@ export default {
     },
     data() {
         return {
-           
+
         }
     },
     methods: {
@@ -72,7 +72,7 @@ export default {
         }
     },
     mounted() {
-        
+
     },
 }
 </script>

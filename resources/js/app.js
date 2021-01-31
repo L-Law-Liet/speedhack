@@ -3,7 +3,7 @@ require('./bootstrap');
 require('moment');
 
 import Vue from 'vue';
-
+import Vuelidate from "vuelidate";
 import { InertiaApp } from '@inertiajs/inertia-vue';
 import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
@@ -11,6 +11,7 @@ import { BootstrapVue } from 'bootstrap-vue';
 import VModal from 'vue-js-modal';
 
 Vue.mixin({ methods: { route } });
+Vue.use(Vuelidate);
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);

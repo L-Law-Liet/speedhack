@@ -41,9 +41,8 @@
 				    		<ul class="links">
 				    			<li><a href="/">О компаний</a></li>
 				    			<li><a href="/">Отзывы</a></li>
-				    			
 				    		</ul>
-				    	</div>	
+				    	</div>
 			    	</section>
 			    </div>
 			    <div class="col-12 col-md-3">
@@ -64,7 +63,7 @@
 					<div class="text-bottom-right">
 						<span class="text-bottom">Разработано в NIDGE Digital Agency</span>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -73,13 +72,13 @@
 <script>
 export default {
     components: {
-     
+
     },
     methods: {
-       
+
     },
     computed: {
-        
+
     }
 }
 </script>
@@ -178,6 +177,7 @@ export default {
 	.text-bottom-right{
 		text-align: right;
 	}
+
 	@media only screen and (max-width: 768px) {
 		.left-land{
 			margin-bottom: 25px;
@@ -196,3 +196,4 @@ export default {
 		}
 	}
 </style>
+

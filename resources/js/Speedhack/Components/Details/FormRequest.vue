@@ -6,36 +6,69 @@
 			      	<div class="content">
 			      		<p class="title">Оставьте заявку</p>
 			      		<p class="subtitle">Оставьте нам заявку мы свяжемся с вами и ответим на любые возникшие вопросы</p>
-			      		<form class="form-wrap">
+			      		<form class="form-wrap" @submit.prevent="submitForm()">
 			      			<div class="form-group">
 							    <label>ФИО</label>
-							    <input type="text" class="form-control" placeholder="Ваша имя и фамилия">
+							    <input v-model.trim="$v.fullname.$model"
+                                       :class="{invalid: ($v.fullname.$invalid && $v.fullname.$dirty)}"
+                                    type="text" class="form-control" placeholder="Ваша имя и фамилия">
+                                <span class="invalid-message" v-if="($v.fullname.$invalid && $v.fullname.$dirty)">
+                                    Ошибка!
+                                </span>
 							</div>
 
 							<div class="form-group">
 							    <label>Ваш e-mail</label>
-							    <input type="text" class="form-control" placeholder="Введите e-mail">
+							    <input  v-model.trim="$v.email.$model"
+                                    type="text" class="form-control"
+                                        :class="{ invalid: ($v.email.$invalid && $v.email.$dirty) }"
+                                        placeholder="Введите e-mail">
+                                <span class="invalid-message" v-if="($v.email.$invalid && $v.email.$dirty)">
+                                    Ошибка!
+                                </span>
 							</div>
 
 							<div class="form-group">
 							    <label>Ваш номер телефона</label>
-							    <input type="text" class="form-control" placeholder="Введите номер">
+							    <input  v-model.trim="$v.phone.$model"
+                                        :class="{invalid: ($v.phone.$invalid && $v.phone.$dirty)}"
+                                        type="text" class="form-control" placeholder="Введите номер">
+                                <span class="invalid-message" v-if="($v.phone.$invalid && $v.phone.$dirty)">
+                                    Ошибка!
+                                </span>
 							</div>
 							<p class="text_info">
 								Нажимая кнопку “Записаться” вы оставляете заявку и наш менеджер свяжется с Вами в ближайшее время
 							</p>
-							<button class="btn-main">
+							<button type="submit" class="btn-main">
 								Записаться
 							</button>
 			      		</form>
 			      	</div>
 			    </div>
 			</div>
-		</div>		
+		</div>
 	</section>
 </template>
 <script>
-
+import {required, email, minLength} from 'vuelidate/lib/validators';
+export default {
+    data: () => ({
+        fullname: '',
+        email: '',
+        phone: '+7',
+    }),
+    validations: {
+        fullname: {required},
+        email: {required, email},
+        phone: {required, minLength: minLength(11)},
+    },
+    methods: {
+        submitForm(){
+            this.$v.$touch();
+        }
+    }
+}
 </script>
 <style scoped>
 	.form-request{
@@ -45,7 +78,7 @@
     	background-size: cover;
     	padding: 100px 0px;
 	}
-	
+
 	.content .title{
 		font-family: 'Inter-Bold', sans-serif;
 		text-align: center;
@@ -97,9 +130,27 @@
 	    padding: 16px;
 	}
 
-	@media only screen and (max-width: 768px) {
+    .invalid {
+        border: 2px solid #E36018 !important;
+    }
+    .invalid-message {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        display: flex;
+        align-items: center;
+
+        color: #E36018;
+    }
+
+    @media only screen and (max-width: 768px) {
 		.form-wrap{
 			width: 100%;
 		}
 	}
 </style>
+

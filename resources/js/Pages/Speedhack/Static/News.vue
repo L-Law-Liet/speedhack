@@ -12,28 +12,28 @@
                             <a href="/" class="btn-main">Начать курс</a>
                             <a href="/" class="link-main">Посмотреть курсы</a>
                         </div>
-                    </div> 
+                    </div>
                     <div class="banner-img">
                         <img src="/images/ilustration/banner-3.png">
-                    </div>  
+                    </div>
                 </div>
             </div>
         </section>
         <div class="container mg-150">
-            <block-title 
-                title="Выбери курсы которые тебе нравится"
-                subtitle="Онлайн программы, чтобы изучить один конкретный навык"
+            <block-title
+                title="Наши новости"
+                subtitle="Вся наша работа направлена на улучшение качества образования"
             ></block-title>
 
             <div class="row">
                 <template v-for="item in news">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="pg-not">
-                            <item-news :news="item"></item-news>  
-                        </div> 
+                            <item-news :news="item"></item-news>
+                        </div>
                     </div>
                 </template>
-            </div>  
+            </div>
         </div>
         <form-request></form-request>
     </welcome-layout>

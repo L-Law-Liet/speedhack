@@ -2,7 +2,7 @@
 	<section class="form-request">
 		<div class="container">
 			 <div class="row justify-content-center">
-			    <div class="col-7">
+			    <div class="col-12 col-md-10 col-lg-7">
 			      	<div class="content">
 			      		<p class="title">Можете оставить отзыв</p>
 			      		<p class="subtitle">Если вы ученик нашего образовательного центра то можете оставить нам отзыв</p>
@@ -108,5 +108,15 @@
 	    line-height: 20px;
 	    text-align: center;
 	    padding: 16px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.content{
+			width: 100%;
+			max-width: 100%;
+		}
+		.form-wrap{
+			width: 100%;
+		}
 	}
 </style>

@@ -5,7 +5,7 @@
 
 		<div class="container news-item-wrap">
 			<div class="row">
-				<div class="col-12 col-md-7">
+				<div class="col-12 col-md-8 col-lg-7">
 					<section class="content-wrap">
 						<span class="title">
 							Новости
@@ -20,7 +20,7 @@
 					</section>
 					
 				</div>
-				<div class="col-12 col-md-5">
+				<div class="col-12 col-md-4 col-lg-5">
 					<div class="img">
 						<img src="/images/ilustration/news-5.jpg">
 					</div>
@@ -108,5 +108,16 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+	@media only screen and (max-width: 768px) {
+		.content-wrap{
+			width: 100%;
+		}
+	}
+	@media only screen and (max-width: 1024px) {
+		.img{
+			height: 290px;
+		}
+
 	}
 </style>

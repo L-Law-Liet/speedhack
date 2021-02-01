@@ -74,4 +74,20 @@
 		font-size: 16px;
 		line-height: 19px;
 	}
+
+	@media only screen and (max-width: 768px) {
+		.item-tab-course{
+			flex-direction: column;
+		}
+
+		.item-tab-course .img{
+			width: 100%;
+			margin: 0px;
+		}
+
+		.item-tab-course .wrap-content{
+			width: 100%;
+			margin: 0px;
+		}
+	}
 </style>

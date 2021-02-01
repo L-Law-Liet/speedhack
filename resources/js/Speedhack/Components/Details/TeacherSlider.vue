@@ -57,6 +57,34 @@ export default {
 			  	"speed": 500,
 			  	"slidesToShow": 3,
 			  	"slidesToScroll": 1,
+			  	responsive:[
+			  		{
+		            	breakpoint: 1120,
+		                settings: 
+		    			{	
+		                slidesToShow: 2,
+		                slidesToScroll: 1,
+		                }
+		            },
+					{
+		                breakpoint: 800,
+		                settings: 
+		    			{
+		                slidesToShow: 2,
+		                slidesToScroll: 2
+		                }
+		            },
+		            {
+		                breakpoint: 600,
+		                settings: 
+		    	        {
+		                slidesToShow: 1,
+		                slidesToScroll: 1
+		                }
+		            }
+
+	    	    ]
+                
 			},
 			teachers:[
 				{
@@ -143,6 +171,21 @@ export default {
 }
 .dots-slider li.active{
 	background: #050A1C;
+}
+.teacher-slider-item .content-wrap{
+	z-index: 2;
+}
+@media only screen and (max-width: 768px) {
+	.teacher-slider .wrap-header{
+		flex-direction: column;
+	}
+
+	.teacher-slider .wrap-header .wrap-arrows-slider{
+		margin-bottom: 20px;
+	}
+	.wrap-teacher-slider-item{
+		padding: 0px 5px;
+	}
 }
 </style>
 

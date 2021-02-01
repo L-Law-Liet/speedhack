@@ -110,4 +110,21 @@
 		top: 5px;
 		left: 0px;
 	}
+	@media only screen and (max-width: 767px) {
+		.banner-white .title{
+			font-size: 32px;
+    		line-height: 38px;
+		}
+		.banner-white .img{
+			margin-top: 60px;
+		}
+		.facts{
+			flex-direction: column;
+			margin-bottom: 60px;
+		}
+		.facts li{
+			margin-bottom: 30px;
+		}
+		   
+	}
 </style>

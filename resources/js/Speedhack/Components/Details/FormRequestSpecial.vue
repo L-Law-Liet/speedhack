@@ -161,4 +161,28 @@
 		font-size: 36px;
 		line-height: 40px;
 	}	
+	@media only screen and (max-width: 767px) {
+		.title-main{
+			font-size: 42px;
+    		line-height: 69px;
+		}
+		.new-price p{
+			font-size: 50px;
+		}
+		.new-price{
+			margin-bottom: 20px;
+		}
+		.old-price{
+			margin-bottom: 60px;
+		}
+		.content .title{
+			width: 100%;
+		}
+		.content .subtitle{
+			width: 100%;
+		}
+		.form-wrap{
+			width: 100%;
+		}
+	}
 </style>

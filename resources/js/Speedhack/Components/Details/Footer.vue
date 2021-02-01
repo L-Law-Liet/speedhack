@@ -41,7 +41,7 @@
 				    		<ul class="links">
 				    			<li><a href="/">О компаний</a></li>
 				    			<li><a href="/">Отзывы</a></li>
-				    			<li><a href="/">Политика </br> конфиденциальности</a></li>
+				    			
 				    		</ul>
 				    	</div>	
 			    	</section>
@@ -177,5 +177,22 @@ export default {
 	}
 	.text-bottom-right{
 		text-align: right;
+	}
+	@media only screen and (max-width: 768px) {
+		.left-land{
+			margin-bottom: 25px;
+		}
+		.social-links{
+			margin-bottom: 25px;
+		}
+		.main-links{
+			margin-bottom: 20px;
+		}
+		.text-bottom-left{
+			text-align: center;
+		}
+		.text-bottom-right{
+			text-align: center;
+		}
 	}
 </style>

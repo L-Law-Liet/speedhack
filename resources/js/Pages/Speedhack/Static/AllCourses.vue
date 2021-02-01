@@ -16,7 +16,7 @@
 		      		</template>
 			      		<div class="row top-40">
 			      			<template v-for="item in courses">
-			      				<div class="col-md-4">
+			      				<div class="col-12  col-md-6 col-lg-4">
 			      					<item-course-block :course="item"></item-course-block>
 					                
 					            </div> 
@@ -30,7 +30,7 @@
 		      		</template>
 			      		<div class="row top-40">
 			      			<template v-for="item in courses">
-			      				<div class="col-md-4">
+			      				<div class="col-12 col-md-6 col-lg-4 ">
 			      					<item-course-block :course="item"></item-course-block>
 					                
 					            </div> 
@@ -120,4 +120,5 @@
 		justify-content: center;
 		align-items: center;
 	}
+	
 </style>

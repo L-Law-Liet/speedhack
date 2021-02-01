@@ -47,4 +47,13 @@
 		height: 22px;
 		margin-right: 16px;
 	}
+	@media only screen and (max-width: 767px) {
+		.main-title{
+			font-size: 32px;
+			line-height: 38px;
+		}
+		.title{
+			margin-bottom: 30px;
+		}
+	}
 </style>

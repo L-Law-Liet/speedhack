@@ -157,4 +157,26 @@
 	.icons:last-child{
 		margin: 0px;
 	}
+	@media only screen and (max-width: 767px) {
+		.content-wrap{
+			padding: 28px 30px;
+		}
+		.content-wrap .wrap{
+			flex-direction: column;
+		}
+		.icons{
+			margin-bottom: 16px;
+		}
+		.icons:last-child{
+			margin-bottom: 0px;
+		}
+		.lessons-list li{
+			padding: 22px 30px;
+			flex-direction: column;
+    		align-items: flex-start;
+		}
+		.lesson_title{
+			margin-bottom: 20px;
+		}
+	}
 </style>

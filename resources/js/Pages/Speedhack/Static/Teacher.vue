@@ -25,7 +25,7 @@
                 основных предметов</span>
                 <span class="subtitle">Вся наша работа направлена на улучшение качества образования, расширение программ обучения и возможностей дать необходимых материалов. Мы создаем современное место, в котором не только интересно учиться также интересно преподавать.</span>
                 <div class="row">
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-6 col-lg-3" style="margin-bottom: 20px;">
                         <div class="fact-item">
                             <div class="count">1</div>
                             <span class="heading">Гибкий график</span>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
 
-                     <div class="col-12 col-md-3">
+                     <div class="col-12 col-md-6 col-lg-3" style="margin-bottom: 20px;">
                         <div class="fact-item">
                             <div class="count">2</div>
                             <span class="heading">Онлайн-обучение</span>
@@ -41,7 +41,7 @@
                         </div>
                     </div>
 
-                     <div class="col-12 col-md-3">
+                     <div class="col-12 col-md-6 col-lg-3" style="margin-bottom: 20px;">
                         <div class="fact-item">
                             <div class="count">3</div>
                             <span class="heading">Саморазвитие</span>
@@ -49,7 +49,7 @@
                         </div>
                     </div>
 
-                     <div class="col-12 col-md-3">
+                     <div class="col-12 col-md-6 col-lg-3" style="margin-bottom: 20px;">
                         <div class="fact-item">
                             <div class="count">4</div>
                             <span class="heading">Драйв</span>
@@ -65,7 +65,7 @@
                 <span class="title">Кого мы ищем?</span>
                 <span class="subtitle">Вся наша работа направлена на улучшение качества образования</span>
                 <div class="row">
-                    <div class="col-12 col-md-7">
+                    <div class="col-12 col-md-9 col-lg-7">
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="look-for-item">
@@ -93,7 +93,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="col-12 col-md-5">
+                    <div class="col-12 col-md-3 col-lg-5">
                         <div class="img">
                             <img src="/images/bg/look.jpg">
                         </div>
@@ -230,6 +230,22 @@ export default {
         line-height: 20px;
         color: #050A1C;
         opacity: 0.9;
-            display: block;
+        display: block;
+    }
+    @media only screen and (max-width: 767px) {
+        .about_page .title{
+            font-size: 32px;
+            line-height: 42px;
+            margin: 0px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        .about_page .subtitle{
+            width: 100%;
+            font-size: 18px;
+        }
+        .fact-item{
+            margin-bottom: 20px;
+        }
     }
 </style>

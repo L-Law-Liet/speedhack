@@ -27,7 +27,7 @@
 
             <div class="row">
                 <template v-for="item in news">
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-6 col-lg-3">
                         <div class="pg-not">
                             <item-news :news="item"></item-news>  
                         </div> 

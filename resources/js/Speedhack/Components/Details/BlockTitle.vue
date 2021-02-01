@@ -37,4 +37,11 @@
 		margin-bottom: 50px;
 		display: block;
 	}
+	@media only screen and (max-width: 768px) {
+		.block-title{
+			font-size: 32px;
+			line-height: 40px;
+			margin-bottom: 20px;
+		}
+	}
 </style>

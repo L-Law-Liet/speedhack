@@ -62,4 +62,16 @@
 		font-size: 16px;
 		color: #7B838B;
 	}
+	@media only screen and (max-width: 767px) {
+		.course-info{
+			padding-top: 20px;
+		}
+		.main-title{
+			font-size: 28px;
+ 			line-height: 38px;
+		}
+		.item{
+			margin-bottom: 40px;
+		}
+	}
 </style>

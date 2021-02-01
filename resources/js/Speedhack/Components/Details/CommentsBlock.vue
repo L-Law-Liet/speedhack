@@ -90,4 +90,13 @@
 	.comments-block{
 		margin-bottom: 100px;
 	}
+
+	@media only screen and (max-width: 768px) {
+		.raiting{
+			flex-wrap: wrap;
+		}
+		.info{
+			margin: 0px;
+		}
+	}
 </style>

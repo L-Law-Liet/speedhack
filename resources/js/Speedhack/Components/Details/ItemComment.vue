@@ -96,6 +96,18 @@
 		display: inline-block;
 		margin-top: 16px;
 	}
+
+	@media only screen and (max-width: 768px) {
+		.comment-item{
+			flex-direction: column;
+			padding: 40px 20px;
+		}
+
+		.text-wrap{
+			margin: 0px;
+    		margin-top: 20px;
+		}
+	}
 </style>
 
 

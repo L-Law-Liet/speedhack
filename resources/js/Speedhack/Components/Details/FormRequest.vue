@@ -2,7 +2,7 @@
 	<section class="form-request">
 		<div class="container">
 			 <div class="row justify-content-center">
-			    <div class="col-7">
+			    <div class="col-12 col-md-7">
 			      	<div class="content">
 			      		<p class="title">Оставьте заявку</p>
 			      		<p class="subtitle">Оставьте нам заявку мы свяжемся с вами и ответим на любые возникшие вопросы</p>
@@ -95,5 +95,11 @@
 	    line-height: 20px;
 	    text-align: center;
 	    padding: 16px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.form-wrap{
+			width: 100%;
+		}
 	}
 </style>

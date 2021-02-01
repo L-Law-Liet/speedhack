@@ -126,4 +126,13 @@
 	.footer-form p a{
 		color: #F2994A;
 	}
+	@media only screen and (max-width: 767px) {
+		.login-page{
+			padding: 40px 0;
+		}
+		.login-form{
+			width: 100%;
+			box-shadow: none;
+		}
+	}
 </style>

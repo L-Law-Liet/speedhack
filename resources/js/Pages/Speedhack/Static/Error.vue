@@ -41,4 +41,9 @@
 	.btn-main{
 		padding: 16px 40px;
 	}
+	@media only screen and (max-width: 768px) {
+		.img{
+			width: 100%;
+		}
+	}
 </style>

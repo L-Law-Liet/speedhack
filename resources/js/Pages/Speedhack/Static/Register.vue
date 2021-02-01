@@ -4,12 +4,12 @@
 
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-12 col-md-6 pg-not">
+				<div class="col-12 col-sm-6 col-md-4 pg-not">
 					<div class="register-poster">
 						<img src="/images/bg/register-poster.jpg">
 					</div>
 				</div>
-				<div class="col-12 col-md-6 pg-not">
+				<div class="col-12 col-sm-6 col-md-8 pg-not">
 					<div class="register-wrap">
 						<span class="title">
 							Начать регистрацию
@@ -149,5 +149,24 @@
 		top: 50%;
 		right: 0px;
 		transform: translateY(-50%);
+	}
+	@media only screen and (max-width: 1102px) {
+		.register-wrap{
+			padding: 90px 60px;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.register-wrap{
+			padding: 40px 30px;
+		}
+		.register-poster{
+			height: 500px;
+		}
+		
+	}
+	@media only screen and (max-width: 508px) {
+		.register-poster{
+			height: 200px;
+		}
 	}
 </style>

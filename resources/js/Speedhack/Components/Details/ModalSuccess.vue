@@ -3,9 +3,9 @@
 		<div class="img">
 			<img src="/images/ilustration/success.png">
 		</div>
-		<span class="text">Ваша заявка успешно отправлено</span>
+		<span class="text">Ваша заявка успешно отправлена</span>
 		<button class="btn-main" @click="hideSuccessModal">Ok, спасибо!</button>
-		
+
 	</div>
 </template>
 <script>
@@ -18,7 +18,7 @@
 	}
 </script>
 <style scoped>
-	
+
 	.login-form{
 		padding-top: 20px;
 		padding-bottom: 20px;

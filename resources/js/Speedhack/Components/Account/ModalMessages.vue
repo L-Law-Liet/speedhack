@@ -5,10 +5,10 @@
 		<ul class="messages-lists">
 			<template v-for="item in messages">
 				<li class="item">
-					<div class="avatar" :style="'background-color:' + item.color">
+					<!-- <div class="avatar" :style="'background-color:' + item.color">
 						<img :src="item.img" v-if="item.img">
 						<div class="letter" v-else> {{ item.name | letter }} </div>
-					</div>
+					</div> -->
 					<div class="text">
 						<b>{{ item.name }}</b>
 						{{ item.message }} 

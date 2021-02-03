@@ -12,10 +12,14 @@
 
 		<div class="indicator two">
 			<button class="btn-icon heart"><img src="/images/icons/heart.svg"></button>
-			<button class="btn-icon bell active">
+			<button class="btn-icon bell active" @click="modalShow = !modalShow">
 				<img src="/images/icons/bell.svg">
 				<div class="message-modal-wrap">
-					<!-- <modal-messages></modal-messages> -->
+					<transition name="fade">
+						<template v-if="modalShow">
+							<modal-messages></modal-messages>
+						</template>
+					</transition>
 				</div>	
 			</button>
 			<a href="" class="avatar"><img src="/images/users/avatar-1.jpg"></a>
@@ -28,7 +32,8 @@
 	export default {
 		data() {
 	        return {
-	        	mobileMenu: false
+	        	mobileMenu: false,
+	        	modalShow: false,
 	        }
 	    },
 	    components: {
@@ -159,6 +164,13 @@
 	}
 	.aside-mobile-btn{
 		display: none;
+	}
+
+	.fade-enter-active, .fade-leave-active {
+	  transition: opacity .2s;
+	}
+	.fade-enter, .fade-leave-active {
+	  opacity: 0;
 	}
 	@media only screen and (max-width: 768px) {
 		.aside-mobile-btn{

@@ -8,9 +8,9 @@
 				<img src="/images/users/avatar-1.jpg">
 			</div>	
 			<div class="name-wrap">
-				<span class="name">Нурбеков Еркебулан</span>
+				<span class="name">Нурбек Еркебулан</span>
 				<span class="subtitle">Твой аккаунт</span>
-			</div>
+			</div> 
 		</div>
 		
 		<ul class="links-wrap">

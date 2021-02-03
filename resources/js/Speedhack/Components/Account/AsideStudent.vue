@@ -10,7 +10,7 @@
 			<div class="name-wrap">
 				<span class="name">Нурбек Еркебулан</span>
 				<span class="subtitle">Твой аккаунт</span>
-			</div> 
+			</div>
 		</div>
 		
 		<ul class="links-wrap">

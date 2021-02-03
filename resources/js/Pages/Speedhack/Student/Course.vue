@@ -226,4 +226,37 @@
 		padding-left: 60px;
 		margin-bottom: 60px;
 	}
+
+  @media only screen and (max-width: 768px) {
+      .account-title{
+        padding: 20px;
+      }
+      .tab-wrap{
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      .overview-wrap{
+        padding-right: 20px;
+        padding-left: 20px;
+        flex-direction: column;
+      }
+      .overview-wrap .item{
+          margin-right: 30px;
+          margin-bottom: 20px;
+      }
+      .overview-wrap .item:last-child{
+        margin-bottom: 0px;
+      }
+
+      .course-title{
+          padding-right: 20px;
+          padding-left: 20px;
+      }
+      .colapse-wrap{
+          padding-right: 20px;
+          padding-left: 20px;
+      }
+
+      
+  }
 </style>

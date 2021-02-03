@@ -1,17 +1,17 @@
 <template>
 	<student-layout>
     	<section class="bg-account">
-    		<div class="title-page"><span>Мой профиль</span></div>
+    		<div class="title-page"><span>Каталог курсов</span></div>
     		<div class="tab-course tab-course-account">
 		  		<b-tabs
 		  			active-nav-item-class="active-tab-nav-item">
 			    	<b-tab active>
 		      		<template #title>
-		        		<span class="circle"></span> Онлайн-урок
+		        		<span class="circle"></span> Английский язык
 		      		</template>
 			      		<div class="row top-40">
 			      			<template v-for="item in courses">
-			      				<div class="col-md-4">
+			      				<div class="col-12 col-md-6 col-lg-6 col-xl-4">
 			      					<item-course-buy :course="item"></item-course-buy>
 					                
 					            </div> 
@@ -24,8 +24,8 @@
 		        		<span class="circle"></span> Казахский язык
 		      		</template>
 			      		<div class="row top-40">
-			      			<template v-for="item in courses">
-			      				<div class="col-md-4">
+			      			<template v-for="item in courses2">
+			      				<div class="col-12 col-md-6 col-lg-6 col-xl-4">
 			      					<item-course-buy :course="item"></item-course-buy>
 					                
 					            </div> 
@@ -48,16 +48,30 @@
 	        return {
 	        	courses: [
 	           		{
-	           			text: "Профессия",
+	           			text: "",
 	           			img: "/images/ilustration/course-1.png",
 	           			title: "Английский язык",
 	           			price: "19 500",
 	           		},
 	           		{
-	           			text: "Профессия",
+	           			text: "",
 	           			img: "/images/ilustration/course-2.png",
 	           			title: "Казахский язык",
 	           			price: "20 500",
+	           		},
+           		],
+           		courses2: [
+	           		{
+	           			text: "",
+	           			img: "/images/ilustration/course-1.png",
+	           			title: "Общий",
+	           			price: "19 500",
+	           		},
+	           		{
+	           			text: "",
+	           			img: "/images/ilustration/course-2.png",
+	           			title: "Для экзамена на гос. структуры",
+	           			price: "19 500",
 	           		},
            		],
 	        }
@@ -133,4 +147,15 @@
 	.tab-course-account .nav-tabs .nav-link.active, .tab-course-account .nav-tabs .nav-item.show .nav-link{
 		background-color: transparent;
 	}
+
+	 @media only screen and (max-width: 768px) {
+	 	.tab-course-account {
+	 		margin-left: 20px;
+    		margin-right: 20px;
+	 	}
+	 	.title-page{
+	 		padding: 30px 20px;
+	 	}
+
+	 }
 </style>

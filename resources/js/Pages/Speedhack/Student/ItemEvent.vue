@@ -9,7 +9,7 @@
             SpeedHuck online club
           </span>
           <small>До начала</small>
-          <time-count deadline="2021-02-01 00:00:00"></time-count>
+          <time-count deadline="2021-02-10 00:00:00"></time-count>
           <p>Ожидайте свое время. Это текст о компании. Он необходим для дальнейшего продвижения Вашего дальнейшего сайта. Вам будет <b>необходимо предоставить исходные</b> данные, по которым наши копирайтеры составят правильный текст.</p>
           
           <a href="" class="btn-main">Вернуться назад</a>
@@ -91,5 +91,21 @@
     padding: 12px 60px;
     font-size: 18px;
     margin-top: 40px;
+   }
+
+   @media only screen and (max-width: 768px) {
+      .event-item .title{
+        text-align: center;
+        font-size: 32px;
+      }
+      .event-item{
+        margin: 60px 10px;
+      }
+      p{
+        margin: 0px;
+      }
+      .flip-clock{
+        margin-bottom: 60px;
+      }
    }
 </style>

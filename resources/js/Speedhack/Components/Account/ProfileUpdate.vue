@@ -36,7 +36,6 @@
 				<button class="btn-main">Добавить</button>
 			</div>
 		</form>
-		
 	</section>
 </template>
 <script>
@@ -143,5 +142,39 @@
 		padding: 12px;
 		font-size: 16px;
 		margin-top: 20px;
+	}
+
+	
+	@media only screen and (max-width: 767px) {
+		.form-wrap{
+        	margin-left: 20px;
+    		margin-right: 20px;
+    		padding: 30px;
+    		flex-direction: column;
+    		margin: auto;
+    		margin-bottom: 100px;
+        }
+		 .form-wrap-main{
+        	flex-direction: column;
+        }
+        .column-wrap{
+        	width: 100%;
+        	padding: 20px 0px;
+        }
+        .form-wrap{
+        	width: 90%;
+        }
+	}
+
+
+	@media only screen and (max-width: 1020px)  and (min-width: 768px){
+		.form-wrap{
+			margin-left: 20px;
+    		margin-right: 20px;
+    		padding: 30px;
+    		flex-direction: column;
+        	margin: auto;
+    		margin-bottom: 100px;
+        }
 	}
 </style>

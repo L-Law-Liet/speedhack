@@ -17,4 +17,14 @@ class TeacherController extends Controller
     {   
       return Inertia::render('Speedhack/Teacher/Homework');
     }
+
+     public function profile()
+    {   
+      return Inertia::render('Speedhack/Teacher/Profile');
+    }
+
+     public function calendar()
+    {   
+      return Inertia::render('Speedhack/Teacher/Calendar');
+    }
 }

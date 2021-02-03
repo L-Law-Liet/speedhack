@@ -1,16 +1,16 @@
 <template>
     <welcome-layout>
         <section class="welcome-banner">
-            <div class="container">
+            <div class="container" ref="infoBox">
                 <header-welcome></header-welcome>
                 <div class="wrap">
-                    <div class="content-banner">
+                    <div class="content-banner" >
                         <h1 class="title">Онлайн-обучение
                             востребованных уроков</h1>
                         <span class="subtile">Начните онлайн-обучение вместе с нами. Уже 2300 учеников прошли профессиональное обучение.</span>
                         <div class="button-wrap">
                             <a class="btn-main" @click="showFormReguestModal">Начать курс</a>
-                            <a @click="showSuccessModal" class="link-main">Посмотреть курсы</a>
+                            <a @click="scrollToCourses" class="link-main">Посмотреть курсы</a>
                         </div>
                     </div>
                     <div class="banner-img">
@@ -69,6 +69,13 @@ export default {
         },
         showSuccessModal(){
             this.$modal.show('successModel');
+        },
+        scrollToCourses() {
+            let height = this.$refs.infoBox.clientHeight;
+            window.scrollTo({
+                top: height,
+                behavior: 'smooth'
+            });
         }
     },
     mounted() {

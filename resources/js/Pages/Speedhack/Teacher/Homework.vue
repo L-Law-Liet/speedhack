@@ -3,34 +3,35 @@
 		<section class="bg-account">
     		<div class="title-page"><span>Домашние работы</span></div>
     		<section class="table-wrap">
-    			<table class="table-main">
-		            <tr>
-		                <th>№</th>
-		                <th>Name</th>
-		                <th>Lessons</th>
-		                <th>Point</th>
-		                <th>Homework</th>
-		            </tr>
-		            <tr>
-		                <td>1</td>
-		                <td class="wrap">Мирас Аюпов <div class="new">new</div></td>
-		                <td>Present Perfect</td>
-		                <td><b>7.2/10</b></td>
-		                <td>
-		                	<a class="btn-main active">Посмотреть </a>
-		                </td>
-		            </tr>
-		             <tr>
-		                <td>2</td>
-		                <td class="wrap">Мирас Аюпов <div class="new">new</div></td>
-		                <td>Present Perfect</td>
-		                <td><b>7.2/10</b></td>
-		                <td>
-		                	<a class="btn-main">Посмотреть </a>
-		                </td>
-		            </tr>
-		        </table>
-		        
+    			<div class="table-main-wrap">
+	    			<table class="table-main">
+			            <tr>
+			                <th>№</th>
+			                <th>Name</th>
+			                <th>Lessons</th>
+			                <th>Point</th>
+			                <th>Homework</th>
+			            </tr>
+			            <tr>
+			                <td>1</td>
+			                <td class="wrap">Мирас Аюпов <div class="new">new</div></td>
+			                <td>Present Perfect</td>
+			                <td><b>7.2/10</b></td>
+			                <td>
+			                	<a class="btn-main active">Посмотреть </a>
+			                </td>
+			            </tr>
+			             <tr>
+			                <td>2</td>
+			                <td class="wrap">Мирас Аюпов <div class="new">new</div></td>
+			                <td>Present Perfect</td>
+			                <td><b>7.2/10</b></td>
+			                <td>
+			                	<a class="btn-main">Посмотреть </a>
+			                </td>
+			            </tr>
+			        </table>
+		        </div>
 		        <a class="btn-next"> Загружить еще </a>
     		</section>
     	</section>
@@ -158,5 +159,25 @@
 	.wrap{
 		display: flex;
 		align-items: center;
+	}
+	@media only screen and (max-width: 768px) {
+		.title-page{
+			padding: 30px 20px;
+		}
+		.table-main-wrap{
+			overflow-x: auto;
+			padding-bottom: 40px;
+		}
+		.table-wrap{
+			margin-bottom: 100px;
+			padding-left: 20px;
+    		padding-right: 20px;
+		}
+		.table-main th{
+			padding: 20px 0px 20px 20px; 
+		}
+		.table-main td{
+			padding: 20px 0px 20px 20px;
+		}
 	}
 </style>

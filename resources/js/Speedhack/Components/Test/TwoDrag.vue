@@ -207,4 +207,23 @@
 		background: #E46E67;
 		margin-top: auto;
 	}
+	@media only screen and (max-width: 768px) {
+		.drag-wrap{
+			padding-left: 10px;
+		}
+		.wrap-static{
+			padding-right: 10px;
+		}
+		.wrap-static .item{
+			padding: 15px 15px;
+		    font-size: 14px;
+		    line-height: 18px;
+		}
+
+		.drag-wrap .item .item-drag{
+			padding: 15px 15px;
+		    font-size: 14px;
+		    line-height: 18px;
+		}
+	}	
 </style>

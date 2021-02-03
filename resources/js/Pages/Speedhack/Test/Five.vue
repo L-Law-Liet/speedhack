@@ -200,4 +200,30 @@
 	.custom-radio.error .custom-control-input:checked ~ .custom-control-label[data-v-644b22e2]::before{
 		border-color: #3BA972;
 	}
+	@media only screen and (max-width: 768px) {
+		.tab-wrap{
+			padding-right: 20px;
+    		padding-left: 20px;
+		}
+		.tab-wrap .item:last-child{
+			margin: 0px;
+		}
+		.text-test{
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+		.test{
+			padding-right: 20px;
+    		padding-left: 20px;
+		}
+		.buttons-wrap{
+			padding-right: 20px;
+    		padding-left: 20px;
+    		justify-content: center;
+    		margin-bottom: 100px;
+		}
+		.bg-account{
+   			flex-direction: column;
+   		}
+	}
 </style>

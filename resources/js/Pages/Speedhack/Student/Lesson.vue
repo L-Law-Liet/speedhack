@@ -114,7 +114,7 @@
   }
   .video-wrap .video{
     width: 100%;
-    height: 570px;
+    height: 370px;
     border-radius: 8px;
     overflow: hidden;
     background-color: #003ECB;
@@ -164,5 +164,51 @@
     }
     .content-wrap .btn-wrap .btn-download{
       margin-right: 16px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .lesson-wrap{
+          flex-direction: column;
+          padding-right: 20px;
+          padding-left: 20px;
+      }
+      .video-wrap{
+        width: 100%;
+        padding: 0px;
+      }
+      .class-wrap{
+        width: 100%;
+        padding: 0px;
+      }
+
+      .video-wrap .video{
+            height: 250px;
+      }
+      .class-carousel-wrap{
+        padding-top: 78px;
+      }
+
+      .content-wrap{
+          padding-right: 20px;
+          padding-left: 20px;
+      }
+      .content-wrap{
+          padding-right: 20px;
+          padding-left: 20px;
+      }
+      
+    }
+
+    @media only screen and (max-width: 760px) {
+      .content-wrap .btn-wrap{
+        flex-direction: column;
+      }
+      .content-wrap .btn-wrap .btn-download{
+        margin-right: 0px;
+        margin-bottom: 16px;
+      }
+      .content-wrap .btn-wrap .btn-download:last-child{
+        margin-bottom: 0px;
+      }
     }
 </style>

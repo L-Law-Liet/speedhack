@@ -7,34 +7,37 @@
 		                <img src="/images/ilustration/result.svg" alt="CUP">
 		            </div>
 					<span class="title">You're on Results page</span>
+					<button class="mobile-btn" @click="toggleMenu">Progress bar <img src="/images/icons/arraw-blue.svg"></button>
 				</div>
-				<div class="lists-wrap">
-					<span class="title-main">Trainer To Do:</span>
-					<ul class="lists">
-						<li class="item success-item">
-							<img src="/images/icons/check-green.svg">
-							<span class="title">Answer the questuions</span>
-							<b class="ball">7.0</b>
-						</li>
+				<div class="main-lists" :class="{'active': mobileMenu}">
+					<div class="lists-wrap">
+						<span class="title-main">Trainer To Do:</span>
+						<ul class="lists">
+							<li class="item success-item">
+								<img src="/images/icons/check-green.svg">
+								<span class="title">Answer the questuions</span>
+								<b class="ball">7.0</b>
+							</li>
 
-						<li class="item no-access">
-							<img src="/images/icons/check-grey.svg">
-							<span class="title">Answer the questuions</span>
-							<b class="ball">7.0</b>
-						</li>
+							<li class="item no-access">
+								<img src="/images/icons/check-grey.svg">
+								<span class="title">Answer the questuions</span>
+								<b class="ball">7.0</b>
+							</li>
 
-						<li class="item current">
-							<img src="/images/icons/check-black.svg">
-							<span class="title">Answer the questuions</span>
-							<b class="ball">7.0</b>
-						</li>
+							<li class="item current">
+								<img src="/images/icons/check-black.svg">
+								<span class="title">Answer the questuions</span>
+								<b class="ball">7.0</b>
+							</li>
 
-						<li class="item done">
-							<img src="/images/icons/flag.svg">
-							<span class="title">Answer the questuions</span>
-							<b class="ball">7.0</b>
-						</li>
-					</ul>
+							<li class="item done">
+								<img src="/images/icons/flag.svg">
+								<span class="title">Answer the questuions</span>
+								<b class="ball">7.0</b>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</aside>
     		<section class="content-wrap">
@@ -80,8 +83,13 @@
 		},
 	    data() {
 	        return {
-	        	
+	        	mobileMenu: false
 			}
+	    },
+	    methods: {
+	        toggleMenu(){
+	            this.mobileMenu = !this.mobileMenu;
+	        },
 	    }
 	}
 </script>
@@ -267,5 +275,128 @@
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
+	}
+
+		.mobile-btn{
+		display: none;
+	}
+	@media only screen and (max-width: 768px) {
+		.mobile-btn{
+			display: flex;
+			width: 100%;
+			border: none;
+			background-color: #fff;
+			justify-content: space-between;
+			align-items: center;
+			border-top: 1px solid #E0E3EB;
+			padding: 14px 20px;
+    		margin-top: 16px;
+		}
+		.mobile-btn img{
+			width: 16px;
+			height: 16px;
+		}
+		.menu-wrap{
+			width: 100%;
+		}
+		.ball-wrap{
+			height: auto;
+			padding-bottom: 0px;
+    		padding-top: 16px;
+		}
+		.ball-wrap .number{
+			font-size: 42px;
+    		line-height: 52px;
+		}
+
+		.main-lists{
+			display: none;
+    	}
+		.main-lists.active{
+			display: block;
+			animation: fade-in 1s;
+		}
+
+		@keyframes fade-in {
+		  from {
+		    opacity: 0;
+		  }
+		  to {
+		    opacity: 1;
+		  }
+		}
+	}
+
+	@media only screen and (max-width: 1024px){
+		.result .points{
+			width: 60%;
+		}
+		.image{
+			width: 40%;
+			margin: 0px;
+		}
+		.image img{
+			width: 100%;
+			max-width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		.result{
+			padding: 50px 40px;
+		}
+	}
+	@media only screen and (max-width: 1010px) and (min-width: 768px){
+		.result .points{
+			width: 80%;
+		}
+		.image{
+			width: 20%;
+		}
+		.image img{
+			width: 100%;
+			max-width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.bg-account{
+			flex-direction: column;
+		}
+		.tab-wrap{
+			padding-right: 20px;
+    		padding-left: 20px;
+		}
+		.tab-wrap .item:last-child{
+			margin: 0px;
+		}
+		.text-test{
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+		.container{
+			padding-left: 20px;
+    		padding-right: 20px;
+		}
+		.result{
+			padding: 30px 20px;
+			margin-bottom: 100px;
+		}
+		.full_point{
+			font-size: 60px;
+		}
+		.congratulations{
+			font-size: 24px;
+		}
+		.image{
+			margin-left: 0px;
+		}
+		.image img{
+			max-width: 130%;
+		}
+		.point .grammar div{
+			margin-right: 16px;
+		}
 	}
 </style>

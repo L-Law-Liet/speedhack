@@ -7,25 +7,52 @@
 		<ul class="links" :class="{'active': mobileMenu}">
 			<li class="item"><a href="/news">Новости</a></li>
 			<li class="item"><a href="/all/courses">Курсы</a></li>
-			<li class="item"><a href="/teacher">Стать учителем</a></li>
-			<li class="item"><a href="/login/main"> <img src="/images/icons/log-in.svg"> Войти</a></li>
+			<li class="item teacher" @mouseover="teacherActive = true" @mouseleave="teacherActive = false">
+				<a>Для кого</a>
+				<transition name="fade">
+				<div class="h-dropdown" v-if="teacherActive"   @click="teacherActive = false">
+					<a href="/">Стать учеником</a>
+					<a href="/teacher">Стать учителем</a>
+					<a href="/">Компаниям</a>
+				</div>
+				</transition>
+			</li>
+			<li class="item" @click="showLoginModal"><a> <img src="/images/icons/log-in.svg"> Войти</a></li>
 		</ul>
 		<button @click="toggleMenu" class="menu-btn"><img src="/images/icons/menu-mobile.svg"></button>
 		
+		<modal name="loginModel" 
+            :width="450"
+            :height="500"
+            :adaptive="true"> 
+            <login-modal></login-modal>
+        </modal>
+
 	</header>
 </template>
 <script>
+	import LoginModal from '@/Speedhack/Components/Details/LoginModal';
+
 	export default {
     data() {
         return {
-           	mobileMenu: false
+           	mobileMenu: false,
+           	teacherActive: false
         }
+    },
+     components: {
+        LoginModal,
     },
     methods: {
         toggleMenu(){
             this.mobileMenu = !this.mobileMenu;
         },
-        
+        showLoginModal(){
+        	this.$modal.show('loginModel');
+        },
+        showDropdown: function(){
+            this.teacherActive = !this.teacherActive;   
+        }
     },
    	}
 </script>
@@ -65,10 +92,50 @@
 		background-color: transparent;
 		
 	}
+	.header-welcome .links .item:hover{
+		cursor: pointer;
+	}
+	
 	.menu-btn img{
 		width: 35px;
 		height: 35px;
 	}
+	.teacher{
+		position: relative;
+	}
+	.teacher .h-dropdown{
+		position: absolute;
+		top: auto;
+		width: 180px;
+		left: 0px;
+		background-color: #fff;
+		border-radius: 5px;
+		overflow: hidden;
+		/*margin-top: 10px;*/
+		box-shadow: 0 2px 34px rgb(31 42 51 / 15%);
+	}
+	.teacher .h-dropdown a{
+		padding: 10px 15px;
+		display: block;
+		color: #050A1C !important;
+		border-bottom: 1px solid #b5b5b5;
+	}
+
+	.teacher .h-dropdown a:hover{
+		background-color: rgba(0, 62, 203, .1);
+	}
+	.teacher.active .h-dropdown{
+		display: block;
+	}
+
+	.fade-enter-active, .fade-leave-active {
+	  transition: opacity .2s;
+	}
+	.fade-enter, .fade-leave-active {
+	  opacity: 0;
+	}
+
+
 	@media only screen and (max-width: 768px) {
 		.header-welcome .links{
 			width: 100%;
@@ -100,7 +167,11 @@
 			top: 42px;
 			right: 15px;
 		}
-
+		.teacher .h-dropdown{
+			position: inherit;
+			width: 100%;
+		}
+		
 		@keyframes fade-in {
 		  from {
 		    opacity: 0;

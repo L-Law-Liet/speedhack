@@ -36,6 +36,10 @@ class AccountController extends Controller
         return Inertia::render('Speedhack/Student/Events', compact('calendars'));
     }
 
+     public function eventLesson(){
+      return Inertia::render('Speedhack/Student/EventLesson');
+    }
+
     public function homework()
     {   
        return Inertia::render('Speedhack/Student/Homework');

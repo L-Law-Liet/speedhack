@@ -103,4 +103,15 @@
 		width: 25px;
 		height: 25px;
 	}
+	@media only screen and (max-width: 768px) {
+		.test-item .input_wrap{
+   			width: 90px;
+   		}
+   		.last_word{
+   			font-size: 16px;
+   		}
+   		.first_word{
+   			font-size: 16px;
+   		}
+	}
 </style>

@@ -97,4 +97,32 @@
 		height: 100%;
 		object-fit: cover;
 	}
+
+	@media only screen and (max-width: 768px) {
+		.news-item{
+			margin: 20px 30px 20px;
+		}
+		.news-item{
+			flex-direction: column;
+			margin: 10px 15px 10px;
+    		padding: 20px;
+    		margin-top: 40px;
+    		margin-bottom: 100px;
+		}
+		.content-wrap{
+			width: 100%;
+		}
+		.img-wrap{
+			margin-bottom: 50px;
+			width: 100%;
+			order: 1;
+		}
+		.img{
+			height: 250px;
+		}
+		.content-wrap{
+			margin-right: 0px;
+			order: 2;
+		}
+	}
 </style>

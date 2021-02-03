@@ -1,6 +1,6 @@
 <template>
 	<a href="/course" class="course-block">
-        <span class="text"> {{ course.text }}</span>
+        <!-- <span class="text"> {{ course.text }}</span> -->
         <div class="wrap">
             <p class="title">{{ course.title }}</p>
             <div class="img">

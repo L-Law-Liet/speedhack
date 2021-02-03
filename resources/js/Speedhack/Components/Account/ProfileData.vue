@@ -45,7 +45,7 @@
 				</div>
 				<div class="form-group">
 				    <label>Ваш город</label>
-				    <input type="text" class="form-control" placeholder="Введите отчество">
+				    <input type="text" class="form-control" placeholder="Введите город">
 				</div>
 				<button class="btn-main">Добавить</button>
 			</div>
@@ -156,5 +156,34 @@
 		padding: 12px;
 		font-size: 16px;
 		margin-top: 20px;
+	}
+
+	
+
+	@media only screen and (max-width: 767px) {
+		.form-wrap{
+        	margin-left: 20px;
+    		margin-right: 20px;
+    		padding: 30px;
+    		flex-direction: column;
+    		margin-bottom: 100px;
+        }
+		 .form-wrap-main{
+        	flex-direction: column;
+        }
+        .column-wrap{
+        	width: 100%;
+        }
+	}
+
+	@media only screen and (max-width: 1020px)  and (min-width: 768px){
+		
+        .form-wrap{
+        	margin-left: 20px;
+    		margin-right: 20px;
+    		padding: 30px;
+    		flex-direction: column;
+    		margin-bottom: 100px;
+        }
 	}
 </style>

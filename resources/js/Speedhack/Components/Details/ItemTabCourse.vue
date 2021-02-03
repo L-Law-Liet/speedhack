@@ -6,7 +6,7 @@
 		<div class="wrap-content">
 			<span class="title">{{ title }}</span>
 			<p class="text">{{ text }}</p>
-			<a href="/" class="btn-main">Начать курс</a>
+			<a class="btn-main" @click="showFormReguestModal">Начать курс</a>
 		</div>
 	</div>
 </template>
@@ -26,7 +26,9 @@
 	        }
 	    },
 	    methods: {
-	       
+	        showFormReguestModal(){
+	            this.$modal.show('formReguest');
+	        },
 	    },
 	    mounted() {
 	        
@@ -74,7 +76,9 @@
 		font-size: 16px;
 		line-height: 19px;
 	}
-
+	.btn-main:hover{
+		cursor: pointer;
+	}
 	@media only screen and (max-width: 768px) {
 		.item-tab-course{
 			flex-direction: column;

@@ -9,13 +9,56 @@
                         открыты для особенных</h1>
                         <span class="subtile">Начните онлайн-обучение вместе с нами. Уже 2300 учеников прошли профессиональное обучение.</span>
                         <div class="button-wrap">
-                            <a href="/" class="btn-main">Начать курс</a>
-                            <a href="/" class="link-main">Посмотреть курсы</a>
+                            <a @click="showFormReguestModal" class="btn-main">Начать курс</a>
+                            <a href="/all/courses" class="link-main">Посмотреть направления</a>
                         </div>
                     </div> 
                     <div class="banner-img">
                         <img src="/images/ilustration/banner-2.png">
                     </div>  
+                </div>
+            </div>
+        </section>
+        <section class="look_for pt-100">
+            <div class="container">
+                <span class="title">Направления</span>
+                <span class="subtitle">Вся наша работа направлена на улучшение качества образования</span>
+                <div class="row">
+                     <div class="col-12 col-md-3 col-lg-5">
+                        <div class="img">
+                            <img src="/images/bg/banner-10.jpg">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-9 col-lg-7">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="look-for-item">
+                                    <span class="title">Английский язык</span>
+                                    <span class="text">Ты сможешь решать по-настоящему интересные задачи и делать онлайн-образование чуточку лучше.Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</span>
+                                </div>    
+                            </div> 
+                            <div class="col-12 col-md-6">
+                                <div class="look-for-item">
+                                    <span class="title">Казахский язык</span>
+                                    <span class="text">Ты сможешь решать по-настоящему интересные задачи и делать онлайн-образование чуточку лучше.Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</span>
+                                </div>    
+                            </div> 
+                            <div class="col-12 col-md-6">
+                                <div class="look-for-item">
+                                    <span class="title">Математика</span>
+                                    <span class="text">Ты сможешь решать по-настоящему интересные задачи и делать онлайн-образование чуточку лучше.Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</span>
+                                </div>    
+                            </div> 
+                            <div class="col-12 col-md-6">
+                                <div class="look-for-item">
+                                    <span class="title">Физика</span>
+                                    <span class="text">Ты сможешь решать по-настоящему интересные задачи и делать онлайн-образование чуточку лучше.Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</span>
+                                </div>    
+                            </div> 
+                        </div>
+                    </div>
+                   
                 </div>
             </div>
         </section>
@@ -115,6 +158,11 @@ export default {
         FormRequest
        
     },
+    methods: {
+        showFormReguestModal(){
+            this.$modal.show('formReguest');
+        },
+    }
 }
 </script>
 <style scoped>
@@ -231,6 +279,9 @@ export default {
         color: #050A1C;
         opacity: 0.9;
         display: block;
+    }
+    .pt-100{
+        padding-top: 100px;
     }
     @media only screen and (max-width: 767px) {
         .about_page .title{

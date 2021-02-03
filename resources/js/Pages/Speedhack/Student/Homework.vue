@@ -9,7 +9,7 @@
 	        </div>
 	        <div class="container card-wrap">
 	        	<div class="row">
-	        		<div class="col-12 col-md-4">
+	        		<div class="col-12 col-md-6 col-lg-4">
 	        			<a href="/test/one" class="card-homework">
 	        				<div class="img-wrap">
 	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
@@ -27,7 +27,7 @@
 			                </div>
 			            </a>
 	        		</div>	
-	        		<div class="col-12 col-md-4">
+	        		<div class="col-12 col-md-6 col-lg-4">
 	        			<a href="/test/two" class="card-homework">
 	        				<div class="img-wrap">
 	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
@@ -45,7 +45,7 @@
 			                </div>
 			            </a>
 	        		</div>	
-	        		<div class="col-12 col-md-4">
+	        		<div class="col-12 col-md-6 col-lg-4">
 	        			<a href="/test/three" class="card-homework">
 	        				<div class="img-wrap">
 	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
@@ -63,7 +63,7 @@
 			                </div>
 			            </a>
 	        		</div>
-	        		<div class="col-12 col-md-4">
+	        		<div class="col-12 col-md-6 col-lg-4">
 	        			<a href="/test/four" class="card-homework">
 	        				<div class="img-wrap">
 	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
@@ -81,7 +81,7 @@
 			                </div>
 			            </a>
 	        		</div>		
-	        		<div class="col-12 col-md-4">
+	        		<div class="col-12 col-md-6 col-lg-4">
 	        			<a href="/test/five" class="card-homework">
 	        				<div class="img-wrap">
 	        					<img class="card-img-top" src="/images/ilustration/card_image1.svg" alt="Card image cap">
@@ -99,7 +99,7 @@
 			                </div>
 			            </a>
 	        		</div>
-	        		<div class="col-12 col-md-4">
+	        		<div class="col-12 col-md-6 col-lg-4">
 	        			<div class="card-homework">
 	        				<div class="dark-wrap">
 		                        <img src="/images/icons/lock.svg">
@@ -247,5 +247,37 @@
 		color: #fff;
 		text-align: center;
 		font-family: "Inter", sans-serif;
+	}
+	@media only screen and (max-width: 1000px)  and (min-width: 768px){
+		.title-page{
+			padding: 45px;
+		}
+		.links-wrap{
+			padding: 0px 45px;
+			flex-wrap: wrap;
+		}
+		.links-wrap .button{
+			margin-right: 10px;
+    		margin-bottom: 16px;
+		}
+		.card-wrap{
+			padding: 0px 20px;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.title-page{
+			padding: 20px;
+		}
+		.links-wrap{
+			padding: 0px 20px;
+			flex-wrap: wrap;
+		}
+		.links-wrap .button{
+			margin-right: 10px;
+    		margin-bottom: 16px;
+		}
+		.card-wrap{
+			padding: 0px 20px;
+		}
 	}
 </style>

@@ -12,7 +12,7 @@
 				<div class="col-12 col-sm-6 col-md-8 pg-not">
 					<div class="register-wrap">
 						<span class="title">
-							Начать регистрацию
+							Записаться на пробный урок
 						</span>
 						<form>
 							<div class="form-group">
@@ -24,19 +24,19 @@
 							<div class="form-group">
 							    <input type="email" class="form-control" placeholder="Ваш e-mail">
 							</div>
-							<div class="form-group password-wrap">
+							<!-- <div class="form-group password-wrap">
 							    <input :type="passwordFieldType" class="form-control" placeholder="Придумайте пороль">
 							    <a @click="switchVisibility" class="show-more"><img src="/images/icons/eye-off.svg"></a>
-							</div>
+							</div> -->
 							
-							<label class="checkbox-container">
+							<!-- <label class="checkbox-container">
 							  	<input type="checkbox"	>
 							  	<span class="checkmark"></span>
 							  	Запомнить меня
-							</label>
+							</label> -->
 							<div class="btn-wrap">
 								<a href="/login/main" class="login-btn">Войти</a>
-								<button class="btn-main">Начать курс</button>
+								<button class="btn-main">Отправить заявку</button>
 							</div>	
 						</form>	
 						<p class="info">

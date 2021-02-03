@@ -124,4 +124,9 @@
 		font-size: 16px;
 		color: #050A1C;
 	}
+	@media only screen and (max-width: 768px) {
+		.item-anwer{
+			margin-bottom: 16px;
+		}
+	}
 </style>

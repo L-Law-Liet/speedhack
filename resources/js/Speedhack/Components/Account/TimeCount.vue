@@ -429,4 +429,42 @@ export default {
 .flip-card__back, .flip-card__back-4digits{
   display: none;
 }
+
+
+   @media only screen and (max-width: 768px) {
+      .event-item{
+        margin: 40px 20px 60px;
+      }
+
+      .flip-clock__piece{
+        height: 60px;
+        width: 60px;
+      }
+      .points{
+        margin-left: 6px;
+        margin-right: 6px;
+        padding-bottom: 20px;
+        font-size: 16px;
+        line-height: 38px;
+        padding: 0px;
+      }
+      .flip-card{
+            height: 60px;
+            width: 60px;
+            padding: 0px;
+      }
+      .flip-card__top{
+          width: 100%;
+          font-size: 24px;
+          line-height: 22px;
+          padding: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 60px;
+      }
+      .flip-clock__slot{
+        font-size: 14px;
+      }
+   }
 </style>

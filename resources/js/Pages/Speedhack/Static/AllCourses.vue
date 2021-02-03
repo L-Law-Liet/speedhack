@@ -12,7 +12,7 @@
 		  			active-nav-item-class="active-tab-nav-item">
 			    	<b-tab active>
 		      		<template #title>
-		        		<span class="circle"></span> Онлайн-урок
+		        		<span class="circle"></span> Английский язык
 		      		</template>
 			      		<div class="row top-40">
 			      			<template v-for="item in courses">
@@ -29,7 +29,7 @@
 		        		<span class="circle"></span> Казахский язык
 		      		</template>
 			      		<div class="row top-40">
-			      			<template v-for="item in courses">
+			      			<template v-for="item in courses2">
 			      				<div class="col-12 col-md-6 col-lg-4 ">
 			      					<item-course-block :course="item"></item-course-block>
 					                
@@ -63,15 +63,30 @@
 	        return {
 	           courses: [
 	           		{
-	           			text: "Профессия",
+	           			text: "",
 	           			img: "/images/ilustration/course-1.png",
-	           			title: "Английский язык",
+	           			title: "Подготовка к IELTS",
 	           			date: "18 месяцев",
 	           		},
 	           		{
-	           			text: "Профессия",
+	           			text: "",
 	           			img: "/images/ilustration/course-2.png",
-	           			title: "Казахский язык",
+	           			title: "General English",
+	           			date: "18 месяцев",
+	           		},
+           		],
+
+           		courses2: [
+	           		{
+	           			text: "",
+	           			img: "/images/ilustration/course-1.png",
+	           			title: "Общий",
+	           			date: "18 месяцев",
+	           		},
+	           		{
+	           			text: "",
+	           			img: "/images/ilustration/course-2.png",
+	           			title: "Для экзамена на гос. структуры",
 	           			date: "18 месяцев",
 	           		},
            		],

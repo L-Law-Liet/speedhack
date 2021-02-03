@@ -271,4 +271,31 @@
 	.files a img{
 		margin-right: 10px;
 	}
+	@media only screen and (max-width: 1366px)  and (min-width: 1024px){
+		.wrap-blocks{
+			flex-wrap: wrap;
+		}
+	}
+	@media only screen and (max-width: 1024px)  and (min-width: 768px){
+		.grammer-wrap{
+			margin-left: 30px;
+    		margin-right: 30px;
+		}
+		.wrap-blocks{
+			flex-wrap: wrap;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.wrap-blocks{
+			flex-wrap: wrap;
+		}
+		.grammer-wrap{
+			margin-left: 20px;
+    		margin-right: 20px;
+    		padding: 30px 20px;
+		}
+		.img{
+			width: 100%;
+		}
+	}
 </style>

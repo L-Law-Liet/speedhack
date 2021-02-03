@@ -6,7 +6,7 @@
 					<div class="content">
 						<h2 class="title">{{ course.title }}</h2>
 						<span class="subtitle">{{ course.subtitle }}</span>	
-						<button class="btn-main">Начать курс</button>
+						<button class="btn-main" @click="showFormReguestModal">Начать курс</button>
 					</div>
 				</div>
 				<div class="col-12 col-md-6">
@@ -41,7 +41,11 @@
 	           
 	        }
 	    },
-	    
+	    methods: {
+        	showFormReguestModal(){
+            this.$modal.show('formReguest');
+        },
+    	}
 	}
 </script>
 <style scoped>

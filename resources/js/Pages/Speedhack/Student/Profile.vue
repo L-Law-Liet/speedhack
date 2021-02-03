@@ -68,4 +68,27 @@
 		color: #003ECB;
 		border-bottom: 1px solid #003ECB;
 	}
+	@media only screen and (max-width: 1024px)  and (min-width: 768px){
+		.title-page{
+			padding: 30px 20px;
+		}
+		.tab-wrap{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        
+	}
+	@media only screen and (max-width: 767px) {
+		.title-page{
+			padding: 30px 20px;
+		}
+		.tab-wrap{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        
+       	.tab-wrap .item:last-child{
+       		margin: 0px;
+       	}
+	}
 </style>

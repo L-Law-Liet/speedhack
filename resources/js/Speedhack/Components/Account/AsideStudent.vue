@@ -12,10 +12,18 @@
 				<span class="subtitle">Твой аккаунт</span>
 			</div>
 		</div>
-
+		
 		<ul class="links-wrap">
 			<li>
-				<a href="/account/courses"  class="links-item active">
+				<a href="/account/profile" class="links-item" :class="{'active': route().current() == 'account.profile'}">
+					<div class="icon icon-8"></div>
+					<div class="text">
+						Мой профиль
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="/account/courses"  class="links-item" :class="{'active': route().current() == 'account.courses'}">
 					<div class="icon icon-1"></div>
 					<div class="text">
 						Мои курсы
@@ -23,7 +31,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/account/buy/courses" class="links-item">
+				<a href="/account/buy/courses" class="links-item" :class="{'active': route().current() == 'account.buyCourses'}">
 					<div class="icon icon-2"></div>
 					<div class="text">
 						Каталог курсов
@@ -31,7 +39,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/account/calendar" class="links-item">
+				<a href="/account/calendar" class="links-item" :class="{'active': route().current() == 'account.calendar'}">
 					<div class="icon icon-3"></div>
 					<div class="text">
 						Мое расписание
@@ -39,7 +47,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/account/homework" class="links-item">
+				<a href="/account/homework" class="links-item" :class="{'active': route().current() == 'account.homework'}">
 					<div class="icon icon-4"></div>
 					<div class="text">
 						Домашняя работа
@@ -47,7 +55,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/account/materials" class="links-item">
+				<a href="/account/materials" class="links-item" :class="{'active': route().current() == 'account.materials'}">
 					<div class="icon icon-5"></div>
 					<div class="text">
 						Мои материалы
@@ -55,7 +63,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/account/news" class="links-item">
+				<a href="/account/news" class="links-item" :class="{'active': route().current() == 'account.news'}">
 					<div class="icon icon-6"></div>
 					<div class="text">
 						Новости
@@ -63,21 +71,14 @@
 				</a>
 			</li>
 			<li>
-				<a href="/account/events" class="links-item">
+				<a href="/account/events" class="links-item" :class="{'active': route().current() == 'account.events'}">
 					<div class="icon icon-7"></div>
 					<div class="text">
-						Разговорный клуб
+						Speaking club
 					</div>
 				</a>
 			</li>
-			<li>
-				<a href="/account/profile" class="links-item">
-					<div class="icon icon-8"></div>
-					<div class="text">
-						Мой профиль
-					</div>
-				</a>
-			</li>
+			
 		</ul>
 
 		<div class="logout-btn-wrap">
@@ -105,7 +106,7 @@
 	.ponel-wrap{
 		background-color: #fff;
 		min-width: 320px;
-		
+		width: 320px;
 		border-right: 1px solid #E0E3EB;
 		transition: all .5s ease;
 		/*transition-delay: .5s;*/
@@ -314,6 +315,7 @@
     
 	.ponel-wrap.active{
 		min-width: 100px;
+		width: 100px;
 		transition-delay: .6s;
 		transition: all .4s ease;
 	}
@@ -342,5 +344,23 @@
 	  100% {
 	   position: absolute;
 	  }
+	}
+
+	@media only screen and (max-width: 768px) {
+	 	.ponel-wrap.active{
+			min-width: 0px;
+			width: 0px;
+			left: -10px;
+			overflow: hidden;
+		}
+		.ponel-wrap{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			min-width: 300px;
+			height: 100%;
+		   	z-index: 20;
+		}
+	 
 	}
 </style>

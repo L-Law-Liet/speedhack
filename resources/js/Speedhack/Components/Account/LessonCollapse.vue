@@ -204,4 +204,33 @@
 	.lessons-list li.active .fasts .icons{
 		color: #fff;
 	}
+
+	@media only screen and (max-width: 768px) {
+		.content-wrap .wrap{
+	        flex-direction: column;
+	    }
+
+	    .content-wrap .wrap .icons{
+	        margin: 0px;
+	        margin-bottom: 12px;
+	    }
+	    .content-wrap .wrap .icons:last-child{
+	    	margin-bottom: 0px;
+	    }
+	    .content-wrap{
+	    	padding: 20px 16px 28px;
+	      	align-items: flex-start;
+	    }
+
+	    .lessons-list li a{
+	    	flex-direction: column;
+    		align-items: flex-start;
+	    }
+	    .wrap-rigth .status{
+	    	margin-right: 15px;
+	    }
+	    .lesson_title{
+	    	margin-bottom: 10px;
+	    }
+	}
 </style>

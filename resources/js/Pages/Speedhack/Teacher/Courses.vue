@@ -2,11 +2,11 @@
 	<teacher-layout>
 		<section class="bg-account">
     		<div class="title-page"><span>Мои курсы</span></div>
-    		<div class="container">
+    		
     			<div class="pg-50">
     				<div class="row" v-if="!empty">
 	    				<template v-for="item in courses">
-		    				<div class="col-12 col-md-4">
+		    				<div class="col-12 col-md-6 col-lg-6 col-xl-4">
 		    					<course :course="item"></course>
 		    				</div>
 		    			</template>
@@ -17,7 +17,7 @@
 	    				<a class="btn-main">Начать курс</a>
 	    			</div>
     			</div>		
-    		</div>	
+    		
     	</section>
 	</teacher-layout>
 </template>
@@ -85,4 +85,20 @@
 		padding-left: 45px;
 		padding-right: 45px;
 	}
+	.pg-50{
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+	@media only screen and (max-width: 768px) {
+	    .account-title{
+	        padding: 20px;
+	    }
+	    .title-page{
+	      	padding: 30px 20px;
+	   	}
+	   	.pg-50{
+	   		padding-right: 20px;
+	   		padding-left: 20px;
+	   	}
+  	}
 </style>

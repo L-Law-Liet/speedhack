@@ -12,7 +12,7 @@
 						<span class="title">Вы получите сертификат</span>
 						<span class="text">После окончания курса вы получите Сертификат.
 							Данный сертификат будет подтверждением тому, что вы успешно прошли 3.5-месячную обучающую программу по курсу “General English” в онлайн-школе “SpeedHuck”.</span>
-						<button class="btn-main">Начать курс</button>
+						<button class="btn-main" @click="showFormReguestModal">Начать курс</button>
 					</div>
 				</div>
 			</div>
@@ -20,6 +20,13 @@
 	</section>
 </template>
 <script>
+	export default {
+	  methods: {
+        showFormReguestModal(){
+            this.$modal.show('formReguest');
+        },
+    }
+}
 </script>
 <style scoped>
 	.banner{

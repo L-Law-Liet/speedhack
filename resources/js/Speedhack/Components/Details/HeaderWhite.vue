@@ -10,25 +10,38 @@
 					<li class="item"><a href="/news">Новости</a></li>
 					<li class="item"><a href="/all/courses">Курсы</a></li>
 					<li class="item"><a href="/teacher">Стать учителем</a></li>
-					<li class="item"><a href="/login/main"> <img src="/images/icons/log-in-black.svg"> Войти</a></li>
+					<li class="item" @click="showLoginModal"><a> <img src="/images/icons/log-in-black.svg"> Войти</a></li>
 				</ul>
 				<button @click="toggleMenu" class="menu-btn"><img src="/images/icons/menu-header-blue.svg"></button>
+
+				<modal name="loginModel" 
+		            :width="450"
+		            :height="500"
+		            :adaptive="true"> 
+		            <login-modal></login-modal>
+		        </modal>
 			</div>
 		</div>
 	</header>
 </template>
 <script>
+	import LoginModal from '@/Speedhack/Components/Details/LoginModal';
 	export default {
-	    data() {
+		data() {
 	        return {
 	           	mobileMenu: false
 	        }
+	    },
+	    components: {
+	        LoginModal,
 	    },
 	    methods: {
 	        toggleMenu(){
 	            this.mobileMenu = !this.mobileMenu;
 	        },
-	        
+	        showLoginModal(){
+	        	this.$modal.show('loginModel');
+	        }
 	    }
    	}
 </script>
@@ -58,6 +71,9 @@
 	}
 	.wrap-header-white .links .item{
 		margin-right: 90px;
+	}
+	.wrap-header-white .links .item:hover{
+		cursor: pointer;
 	}
 	.wrap-header-white .links .item:last-child{
 		margin-right: 0px;

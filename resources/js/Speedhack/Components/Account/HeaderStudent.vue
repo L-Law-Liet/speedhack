@@ -1,17 +1,18 @@
 <template>
 	<header class="account-header">
 		<div class="indicator one">
-			<button class="btn-menu" @click="toggleClassAside"><img src="/images/icons/align-justify.svg"></button>
+			<button class="btn-menu aside-mobile-btn" @click="toggleClassAside"><img src="/images/icons/align-justify.svg"></button>
 			<a href="/" class="logo"><img src="/images/logo_2.png"></a>	
-			<div class="form-group search-inputs">
+			<div class="form-group search-inputs" :class="{'active': mobileMenu}">
 			    <input type="text" class="form-control" placeholder="Поиск">
 			    <img src="/images/icons/search.svg" class="icon">
 			</div>
+			<button class="mobile-search-btn" @click="toggleMenu"><img src="/images/icons/search-mobile.svg" class="icon"></button>
 		</div>
 
 		<div class="indicator two">
-			<button class="btn-icon"><img src="/images/icons/heart.svg"></button>
-			<button class="btn-icon active">
+			<button class="btn-icon heart"><img src="/images/icons/heart.svg"></button>
+			<button class="btn-icon bell active">
 				<img src="/images/icons/bell.svg">
 				<div class="message-modal-wrap">
 					<!-- <modal-messages></modal-messages> -->
@@ -27,7 +28,7 @@
 	export default {
 		data() {
 	        return {
-
+	        	mobileMenu: false
 	        }
 	    },
 	    components: {
@@ -36,7 +37,10 @@
 	    methods: {
 	        toggleClassAside() {
 	        	this.$emit('toggleClass');
-	        }
+	        },
+	        toggleMenu(){
+            	this.mobileMenu = !this.mobileMenu;
+        	},
 	    },
 	}
 </script>
@@ -142,5 +146,74 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+	.mobile-search-btn{
+		background-color: transparent;
+		padding: 0px;
+		border:none;
+		display: none;
+	}
+	.mobile-search-btn img{
+		width: 28px;
+		height: 28px;
+	}
+	.aside-mobile-btn{
+		display: none;
+	}
+	@media only screen and (max-width: 768px) {
+		.aside-mobile-btn{
+			display: block;
+		}
+		.account-header{
+			padding: 20px 16px;
+		}
+		.search-inputs{
+			width: 0px;
+			overflow: hidden;
+			transition: width .4s linear;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 3;
+			right: 50px;
+		}
+		.indicator.one{
+			position: relative;
+		}
+		.search-inputs .form-control{
+			width: 220px;
+			min-width: 200px;
+		}
+		.search-inputs.active{
+			width: 220px;
+			transition: width .4s linear;
+		}
+		.avatar{
+			display: none;
+		}
+		.btn-icon.heart{
+			display: none;
+		}
+		.account-header .indicator.one{
+			width: 100%;
+			justify-content: space-between;
+		}
+		.account-header .logo{
+			width: 150px;
+			margin-right: auto;
+		}
+		.mobile-search-btn{
+			display: block;
+			margin-right: 16px;
+		}
+		.btn-icon.bell{
+			margin: 0px;
+		}
+		.search-inputs .form-control{
+		    background: rgba(224, 229, 240, 1);
+		}
+		.btn-menu{
+			margin-right: 16px;
+		}
 	}
 </style>

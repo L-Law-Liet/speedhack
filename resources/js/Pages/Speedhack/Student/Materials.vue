@@ -3,50 +3,30 @@
     	<section class="bg-account">
     		<div class="title-page"><span>Мои материалы</span></div>
     		<section class="tab-wrap">
-    			<div class="item active">Grammar</div>
-    			<div class="item">Vocabulary</div>
+    			<div class="item" :class="{'active': toggle_class == true }" @click="toggle_class = true">Grammar</div>
+    			<div class="item" :class="{'active': toggle_class !== true }" @click="toggle_class = false">Vocabulary</div>
     		</section>
-    		<section class="table-wrap">
-    			<table class="table-main">
-		            <tr>
-		                <th>№</th>
-		                <th>Name</th>
-		                <th>Subject</th>
-		                <th>Actions</th>
-		            </tr>
-		            <tr>
-		                <td>1</td>
-		                <td>Present Simple</td>
-		                <td>Introduction</td>
-		                <td class="btns-wrap">
-		                	<a class="btn-table"> <img src="/images/icons/trash-2.svg"> </a>
-		                	<a class="btn-table"> <img src="/images/icons/download-blue.svg"> </a>
-		            	</td>
-		             
-		            </tr>
-		             <tr>
-		                <td>2</td>
-		                <td>Past Simple</td>
-		                <td>Introduction</td>
-		                <td class="btns-wrap">
-		                	<a class="btn-table"> <img src="/images/icons/trash-2.svg"> </a>
-		                	<a class="btn-table"> <img src="/images/icons/download-blue.svg"> </a>
-		            	</td>
-		            </tr>
-		        </table>
-		        
-		        <a class="btn-next"> Загружить еще </a>
-    		</section>
+    		<template v-if="toggle_class == true">
+	    		<materials></materials>
+    		</template>
+    		<template v-if="toggle_class == false">
+    			<vocabulary></vocabulary>
+    		</template>
 		</section>
 	</student-layout>
 </template>
 <script>
+	import Vocabulary from '@/Speedhack/Components/Account/Vocabulary';
+	import Materials from '@/Speedhack/Components/Account/Materials';
+
 	export default {
 	    components: {
-	    	
+	    	Vocabulary,
+	    	Materials
 	    },
 	    data() {
 	        return {
+	        	toggle_class: true,
 	        }
 	    }
 	}
@@ -145,5 +125,30 @@
 		text-align: right;
 		text-decoration-line: underline;
 		color: rgba(44, 44, 42, 0.8);
+	}
+	@media only screen and (max-width: 768px) {
+		.table-main th{
+			padding: 20px 0px 20px 20px;
+		}
+		.table-main td{
+			padding: 20px;
+		}
+		.title-page{
+			padding: 30px 20px;
+		}
+		.tab-wrap{
+			padding-right: 20px;
+    		padding-left: 20px;
+
+		}
+		.table-wrap{
+			padding-right: 20px;
+			padding-left: 20px;
+			margin-bottom: 60px;
+		}
+		.table-main-wrap{
+			overflow-x: auto;
+			padding-bottom: 20px;
+		}
 	}
 </style>

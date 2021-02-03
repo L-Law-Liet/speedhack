@@ -172,4 +172,30 @@
 		align-items: center;
 		width: 118px;
 	}
+
+	@media only screen and (max-width: 768px) {
+		
+		.tab-wrap{
+			padding-right: 20px;
+    		padding-left: 20px;
+		}
+		.tab-wrap .item:last-child{
+			margin: 0px;
+		}
+		.text-test{
+			margin-left: 20px;
+   		}
+   		.example{
+   			margin-left: 20px;
+    		margin-right: 20px;
+   		}
+   		.test{
+   			padding-left: 20px;
+    		padding-right: 20px;
+   		}
+   		.bg-account{
+   			padding-bottom: 100px;
+   			flex-direction: column;
+   		}
+   	}
 </style>

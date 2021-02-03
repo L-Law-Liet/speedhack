@@ -25,7 +25,31 @@ export default {
     },
     data() {
         return {
-           activeClass: false
+           activeClass: false,
+           windowWidth: window.innerWidth
+        }
+    },
+    mounted() {
+        window.addEventListener('resize', () => {
+          this.windowWidth = window.innerWidth
+          console.log( window.innerWidth);
+        });
+       
+        if(this.isMobile){
+            this.activeClass = true;
+        }else{
+            this.activeClass = false;
+        }
+    },
+    computed: {
+        isMobile() {
+            if(this.windowWidth <= 1366){
+                this.activeClass = true;
+                return true;
+            }else{
+                this.activeClass = false;
+                return false;
+            }
         }
     },
     methods: {
@@ -38,6 +62,7 @@ export default {
 <style scoped>
     .wrap-content{
         display: flex;
+        overflow: hidden;
     }
     .content-wrap{
         width: calc(100% - 320px);
@@ -45,5 +70,18 @@ export default {
 
     .content-wrap.active{
         width: calc(100% - 100px);
+    }
+
+    @media only screen and (max-width: 768px) {
+        .wrap-content{
+            position: relative;
+        }
+        .content-wrap{
+            width: 100%;
+        }
+
+        .content-wrap.active{
+            width: 100%;
+        }
     }
 </style>

@@ -7,7 +7,7 @@
     		<div class="news-wrap">	
     		<div class="row">
 	    		<template v-for="item in news">
-	    			<div class="col-md-3 item-news">
+	    			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 item-news">
 	    				<item-news :news="item"></item-news>
 	    			</div>
 				</template>
@@ -90,5 +90,11 @@
 		padding-left: 60px;
 		padding-right: 60px;
 		padding-top: 40px;
+	}
+	@media only screen and (max-width: 767px) {
+		.news-wrap{
+			padding-left: 20px;
+    		padding-right: 20px;
+		}
 	}
 </style>

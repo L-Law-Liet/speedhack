@@ -4,7 +4,6 @@
     		<div class="account-title">
     			<span>Мои курсы</span>
     		</div>
-    		<div class="container">
     			<div class="pg-50">
     				<div class="row" v-if="!empty">
 	    				<template v-for="item in courses">
@@ -19,7 +18,7 @@
 	    				<a class="btn-main">Начать курс</a>
 	    			</div>
     			</div>		
-    		</div>	
+    			
 		</section>
     </student-layout>
 </template>
@@ -84,4 +83,12 @@
 	.pg-50{
 		padding: 50px;
 	}
+	 @media only screen and (max-width: 768px) {
+	    .account-title{
+	        padding: 20px;
+	    }
+	    .pg-50{
+	    	padding: 40px 20px;
+	    }
+	  }
 </style>

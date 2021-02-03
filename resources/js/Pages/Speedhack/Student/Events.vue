@@ -47,15 +47,14 @@
                             </div>
                         </div>
                         <div class="button">
-                            <a href="/account/event/item" class="add">Записаться</a>
+                            <a href="/account/event/lesson" class="add">Перейти на урок</a>
                             <br>
                             <span>4 места</span>
                         </div>
                     
     			</div>
     			 <div class="card-item">
-                  
-                        <div class="date">
+                  		<div class="date">
                             <div class="time">
                                 <b>12:30</b>
                                 <span>50 min</span>
@@ -79,7 +78,7 @@
                             </div>
                         </div>
                         <div class="button">
-                            <a href="#" class="add active">Записаться</a>
+                            <a href="/account/event/item" class="add active">Записаться</a>
                             <br>
                             <span>4 места</span>
                         </div>
@@ -115,6 +114,32 @@
 				  	"speed": 500,
 				  	"slidesToShow": 7,
 				  	"slidesToScroll": 1,
+				  	responsive:[
+				  		{
+			            	breakpoint: 1120,
+			                settings: 
+			    			{	
+			                slidesToShow: 3,
+			                slidesToScroll: 1,
+			                }
+			            },
+			            {
+			                breakpoint: 800,
+			                settings: 
+			    			{
+			                slidesToShow: 3,
+			                slidesToScroll: 3
+			                }
+			            },
+			            {
+			                breakpoint: 600,
+			                settings: 
+			    	        {
+			                slidesToShow: 2,
+			                slidesToScroll: 1
+			                }
+			            }
+		    	    ]
 				},
 			}
 		},
@@ -372,8 +397,6 @@
 	   	color: #7B838B;
 	}
 
-	
-
 	.card-item .add:hover {
 	    text-decoration: none;
 	    color: #FFFFFF;
@@ -385,5 +408,44 @@
 	    color: #FFFFFF;
 	    background: #F2994A;
 	}
+	@media only screen and (max-width: 1024px) {
+		.bg-account{
+			padding: 50px 30px;
+		}
+		.block-wrap{
+			padding: 30px 35px;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.bg-account{
+			padding: 50px 20px;
+		}
+		.block-wrap{
+			padding: 30px 25px;
+		}
 
+		.arrow-slider{
+			display: none;
+		}
+		.card-item{
+			flex-direction: column;
+			padding: 26px 0px;
+		}
+		.card-item .date{
+			border: none;
+			width: 100%;
+			border-bottom: 1px solid #DFDFDF;
+		}
+		.card-item .content{
+			margin: 0px;
+			padding: 20px 16px;
+			width: 100%;
+		}
+		.card-item .name_img{
+			margin-bottom: 18px;
+		}
+		.card-item .button{
+			width: 100%;
+		}
+	}
 </style>

@@ -9,8 +9,8 @@
                             о наших новостях</h1>
                         <span class="subtile">Начните онлайн-обучение вместе с нами. Уже 2300 учеников прошли профессиональное обучение.</span>
                         <div class="button-wrap">
-                            <a href="/" class="btn-main">Начать курс</a>
-                            <a href="/" class="link-main">Посмотреть курсы</a>
+                            <a @click="showFormReguestModal" class="btn-main">Начать курс</a>
+                            <a href="/all/courses" class="link-main">Посмотреть курсы</a>
                         </div>
                     </div>
                     <div class="banner-img">
@@ -88,6 +88,11 @@ export default {
             ]
         }
     },
+    methods: {
+        showFormReguestModal(){
+            this.$modal.show('formReguest');
+        },
+    }
 }
 </script>
 <style scoped>

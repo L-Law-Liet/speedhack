@@ -213,4 +213,64 @@
 		padding-left: 90px;
 		padding-right: 20px;
 	}
+    @media only screen and (max-width: 1024px)  and (min-width: 768px){
+        .tab-wrap{
+            padding-right: 20px;
+            padding-left: 20px;
+            overflow-x: auto;
+        }
+         .table-wrap{
+            margin-left: 20px;
+            margin-right: 20px;
+            overflow: auto;
+            padding-bottom: 40px;
+        }
+        td{
+            padding: 2px 0px 2px 64px;
+        }
+        td:first-child{
+            padding-left: 30px;
+        }
+        td:last-child{
+            padding-left: 30px;
+            padding-right: 20px;
+        }
+        th{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .title-page{
+            padding: 30px 20px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .title-page{
+            padding: 30px 20px;
+        }
+        .tab-wrap{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        .table-wrap{
+            margin-left: 20px;
+            margin-right: 20px;
+            overflow: auto;
+            padding-bottom: 40px;
+        }
+
+        td{
+            padding: 2px 0px 2px 64px;
+        }
+        td:first-child{
+            padding-left: 30px;
+        }
+        td:last-child{
+            padding-left: 30px;
+            padding-right: 20px;
+        }
+        th{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
 </style>

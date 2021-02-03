@@ -64,7 +64,9 @@ a{
 		}
 	}
 }
-
+.link-main:hover{
+	cursor: pointer;
+}
 @media only screen and (max-width: 768px) {
 	.welcome-banner{
 		.wrap{
@@ -272,11 +274,11 @@ button:focus{
 }
 
 .vc-header{
-	padding: 10px 20px 18px !important;
+	padding: 20px 20px 18px !important;
 }
 
 .vc-arrows-container{
-	padding: 8px 20px !important;
+	padding: 20px 20px !important;
 }
 
 .tab-course-account .tab-content{
@@ -322,4 +324,49 @@ button:focus{
 	}
 }
 
+ @media only screen and (max-width: 768px) {
+	 	.tab-course-account {
+	 		margin-left: 20px;
+    		margin-right: 20px;
+	 	}
+	 	
+	 	.tab-course-account .tab-course .nav-tabs{
+	 		padding-left: 20px;
+	 		padding-right: 20px;
+	 	}
+	 	.tab-course-account .nav-tabs{
+	 		padding-left: 20px !important;
+	 		padding-right: 20px !important;
+	 		padding-left: 20px;
+	 	}
+	 	.tab-course-account .tab-content{
+	 		margin: 0px;
+	 	}
+	 }
+.btn-main:hover{
+	cursor: pointer;
+}
 
+
+.vc-weekday{
+	border: 1px solid #C4C4C4;
+    margin: 10px;
+    border-radius: 5px;
+    line-height: 14px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    color: #2C2D32 !important;
+}
+
+.links-item{
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.vc-arrows-container .vc-arrow:first-child{
+	background: #F2994A;
+}
+
+.vc-arrows-container .vc-arrow:first-child .vc-svg-icon path{
+	fill: #fff !important;
+}

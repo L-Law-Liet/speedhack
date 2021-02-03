@@ -2,9 +2,9 @@
     <student-layout>
     	<section class="bg-account">
     		<div class="title-page"><span> Домашняя работа</span></div>
-    		<div class="container">	
+    		
     		<div class="row wrap-calendar">
-    			<div class="col-12 col-md-7">
+    			<div class="col-12 col-md-6 col-lg-6 col-xl-6">
     				<div class="date-picker-wrap">
 		    			<section class="date-wrap">
 			    			<date-picker
@@ -17,7 +17,7 @@
 			    		</section>
 		    		</div>
     			</div>
-    			<div class="col-12 col-md-5">
+    			<div class="col-12 col-md-6 col-lg-6 col-xl-6">
 		    		<div class="calendar-info-wrap">
 		    			<template v-for="item in events_curse">
 			    			<div class="calendar-info" v-if="item.customData.title !== 'Today'">
@@ -45,13 +45,14 @@
 			    						<b>E-mail учителя</b>
 			    						<span>{{ item.customData.email }}</span>
 			    					</div>
+			    					<a href="/account/lesson" class="btn-main">Начать курс</a>
 			    				</div>
 			    			</div>
 		    			</template>
 		    		</div>
 	    		</div>
     		</div>
-    		</div>
+    		
     		<!-- <ul style="background-color: red;">
     			<template v-for="item in events_curse">
 					<li>{{item.customData.title}}</li>
@@ -86,7 +87,7 @@
 			        {
 			          	key: 'today',
 			          	highlight: 'yellow',
-			         	dates: '2021-01-14 14:38:00',
+			         	dates: '2021-02-14 14:38:00',
 			         	customData: {
 				            title: 'General English',
 				            time: '12:00 - 14:30',
@@ -100,7 +101,7 @@
 			        {
 			          	key: 'today',
 			          	highlight: 'yellow',
-			         	dates: new Date(2021, 0, 5),
+			         	dates: new Date(2021, 1, 5),
 			         	customData: {
 				            title: 'General English',
 				            time: '12:00 - 14:30',
@@ -245,5 +246,49 @@
 	.vc-arrow{
 		background: rgba(208, 208, 208, 0.56);
 		border-radius: 12px;
+	}
+	.date-picker-wrap{
+		max-width: 700px;
+	}
+	.calendar-info-wrap{
+		max-width: 600px;
+	}
+
+	.btn-main{
+		font-size: 16px;
+	    margin-top: 33px;
+	    display: block;
+	    line-height: 15px;
+	    padding: 15px 40px;
+	}
+	@media only screen and (max-width: 1024px) {
+		.wrap-calendar{
+			padding: 0px 5px;
+			margin-bottom: 40px;
+		}
+		.wrap-calendar{
+			padding: 0px 20px;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.title-page{
+			padding: 20px;
+		}
+		.wrap-calendar{
+			padding: 0px 20px;
+		}
+		.calendar-info-wrap{
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		.calendar-info .header-wrap:before{
+			top: -28px;
+		    transform: translateX(-50%) rotate(90deg);
+		    left: 50%;
+		}
+		.wrap-calendar{
+			margin-bottom: 40px;
+		}
 	}
 </style>

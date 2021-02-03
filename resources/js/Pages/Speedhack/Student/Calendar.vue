@@ -45,7 +45,7 @@
 			    						<b>E-mail учителя</b>
 			    						<span>{{ item.customData.email }}</span>
 			    					</div>
-			    					<a href="/account/lesson" class="btn-main">Начать курс</a>
+			    					<a href="/account/lesson" class="btn-main">Начать урок</a>
 			    				</div>
 			    			</div>
 		    			</template>

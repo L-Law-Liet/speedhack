@@ -7,7 +7,7 @@
 						<span class="title">Получите бесплатный урок</span>
 						<span class="text">Дарим пробный урок абсолютно бесплатно всем!
 							Если хочешь получить его просто оставь нам свою почту, и течений часа мы отправим тебе ссылку в почту. Узнай подробнее о курсе ойлайн сейчас вместе от нашего учителя.</span>
-						<button @click="showFormReguestModal" class="btn-main">Начать курс</button>
+						<button @click="isClicked = !isClicked" class="btn-main">Получить урок</button>
 					</div>
 				</div>
 				<div class="col-12 col-md-6">
@@ -15,16 +15,23 @@
 						<img src="/images/bg/b-12.png">
 					</div>
 				</div>
+                <modal-form v-if="isClicked"></modal-form>
 			</div>
 		</div>
 	</section>
 </template>
 <script>
-	export default {
-	  methods: {
-        showFormReguestModal(){
-            this.$modal.show('formReguest');
-        },
+
+import ModalForm from '@/Speedhack/Components/Details/ModalForm';
+export default {
+    data: () => ({
+       isClicked: false,
+    }),
+    components: {
+        ModalForm,
+    },
+    methods: {
+
     }
 }
 </script>
@@ -69,7 +76,7 @@
 	.img{
 		width: 510px;
 		height: 360px;
-		
+
 	}
 	.img img{
 		width: 100%;

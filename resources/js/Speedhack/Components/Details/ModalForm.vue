@@ -1,22 +1,47 @@
 <template>
-	<div class="login-form">
-		<div class="header">
-			<span class="title">Получить пробный урок</span>
-		</div>
-		<form class="form-wrap">
-			<div class="form-group">
-			    <label>Ваши ФИО</label>
-			    <input type="text" class="form-control" placeholder="Номер телефона или логин">
-			</div>
-			<div class="form-group">
-			    <label>Ваш e-mail</label>
-			    <input type="email" class="form-control" placeholder="Введите e-mail">
-			</div>
-			<button class="btn-main">Отправить</button>
-		</form>
-	</div>
+    <div v-if="!submited" class="login-form">
+            <div class="header">
+                <span class="title">Получить пробный урок</span>
+            </div>
+            <form @submit.prevent="submit" class="form-wrap">
+                <div class="form-group">
+                    <label>Ваши ФИО</label>
+                    <input required type="text" class="form-control" placeholder="Номер телефона или логин">
+                </div>
+                <div class="form-group">
+                    <label>Ваш e-mail</label>
+                    <input required type="email" class="form-control" placeholder="Введите e-mail">
+                </div>
+                <button type="submit" class="btn-main">Отправить</button>
+            </form>
+        </div>
+    <modal-success v-else>
+    </modal-success>
 </template>
+<script>
+import ModalSuccess from '@/Speedhack/Components/Details/ModalSuccess';
+export default {
+    data: () => ({
+        submited: false,
+    }),
+    components: {
+        ModalSuccess
+    },
+    methods: {
+        submit(){
+            this.submited = true;
+        }
+    }
+}
+</script>
 <style scoped>
+    .login-form {
+        position: absolute;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+    }
 	.login-page{
 		background-color: #FAFBFC;
 		padding: 100px 0;

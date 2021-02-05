@@ -62,14 +62,12 @@ Route::get('/teacher/homework', [TeacherController::class, 'homework'])->name('t
 Route::get('/teacher/profile', [TeacherController::class, 'profile'])->name('teacher.profile');
 Route::get('/teacher/calendar', [TeacherController::class, 'calendar'])->name('teacher.calendar');
 
-<<<<<<< HEAD
-Route::group(['prefix' => '/student'], function (){
-   Route::get('/', [StudentsController::class, 'index']);
-=======
+//Route::group(['prefix' => '/student'], function (){
+//   Route::get('/', [StudentsController::class, 'index']);
+
 //Route::get('/application/create', [ApplicationController::class, 'calendar'])->name('teacher.calendar');
 Route::prefix('application')->name('application.')->group(function() {
     Route::post('/create', [ApplicationController::class, 'create'])->name('create');
->>>>>>> db708ede100c27f663aaa62682b82e75a19048e5
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -103,49 +101,14 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
     });
 });
 
+Route::prefix('applications')->name('applications/')->group(static function() {
+    Route::get('/',                                             'ApplicationsController@index')->name('index');
+    Route::get('/create',                                       'ApplicationsController@create')->name('create');
+    Route::post('/',                                            'ApplicationsController@store')->name('store');
+    Route::post('/bulk-destroy',                                'ApplicationsController@bulkDestroy')->name('bulk-destroy');
+    Route::post('/{application}',                               'ApplicationsController@update')->name('update');
+    Route::delete('/{application}',                             'ApplicationsController@destroy')->name('destroy');
+});
 Route::get('{any}', function (){
     return Inertia::render('Speedhack/Static/Error');
-});
-
-
-<<<<<<< HEAD
-/* Auto-generated admin routes */
-Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
-    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
-        Route::prefix('admin-users')->name('admin-users/')->group(static function() {
-            Route::get('/',                                             'AdminUsersController@index')->name('index');
-            Route::get('/create',                                       'AdminUsersController@create')->name('create');
-            Route::post('/',                                            'AdminUsersController@store')->name('store');
-            Route::get('/{adminUser}/impersonal-login',                 'AdminUsersController@impersonalLogin')->name('impersonal-login');
-            Route::get('/{adminUser}/edit',                             'AdminUsersController@edit')->name('edit');
-            Route::post('/{adminUser}',                                 'AdminUsersController@update')->name('update');
-            Route::delete('/{adminUser}',                               'AdminUsersController@destroy')->name('destroy');
-            Route::get('/{adminUser}/resend-activation',                'AdminUsersController@resendActivationEmail')->name('resendActivationEmail');
-        });
-    });
-});
-=======
-
->>>>>>> db708ede100c27f663aaa62682b82e75a19048e5
-
-/* Auto-generated admin routes */
-Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
-    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
-<<<<<<< HEAD
-        Route::get('/profile',                                      'ProfileController@editProfile')->name('edit-profile');
-        Route::post('/profile',                                     'ProfileController@updateProfile')->name('update-profile');
-        Route::get('/password',                                     'ProfileController@editPassword')->name('edit-password');
-        Route::post('/password',                                    'ProfileController@updatePassword')->name('update-password');
-=======
-        Route::prefix('applications')->name('applications/')->group(static function() {
-            Route::get('/',                                             'ApplicationsController@index')->name('index');
-            Route::get('/create',                                       'ApplicationsController@create')->name('create');
-            Route::post('/',                                            'ApplicationsController@store')->name('store');
-            Route::get('/{application}/edit',                           'ApplicationsController@edit')->name('edit');
-            Route::post('/bulk-destroy',                                'ApplicationsController@bulkDestroy')->name('bulk-destroy');
-            Route::post('/{application}',                               'ApplicationsController@update')->name('update');
-            Route::delete('/{application}',                             'ApplicationsController@destroy')->name('destroy');
-        });
->>>>>>> db708ede100c27f663aaa62682b82e75a19048e5
-    });
 });

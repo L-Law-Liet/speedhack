@@ -4,7 +4,7 @@
     		<div class="title-page"><span>Мой профиль</span></div>
     		<section class="tab-wrap">
     			<div class="item" :class="{'active': toggle_class == true }" @click="toggle_class = true">Личные данные</div>
-    			<div class="item" :class="{'active': toggle_class !== true }" @click="toggle_class = false">Изменить пороль</div>
+    			<div class="item" :class="{'active': toggle_class !== true }" @click="toggle_class = false">Изменить пaроль</div>
     		</section>
 
     		<section v-if="toggle_class == true">

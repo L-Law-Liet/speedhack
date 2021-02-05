@@ -6,7 +6,7 @@
         </div>
         <div class="event-item">
           <span class="title">
-            SpeedHuck online club
+            SpeedHack online club
           </span>
           <small>До начала</small>
           <time-count deadline="2021-02-10 00:00:00"></time-count>

@@ -374,3 +374,18 @@ button:focus{
 .vc-day{
 	min-height: 62px !important;
 }
+
+.invalid-feedback{
+	display: block;
+}
+
+.plyr--full-ui input[type=range]{
+	color: #F2994A !important;
+}
+.plyr__control--overlaid{
+	background:  #F2994A !important;
+}
+
+// .plyr__controls .plyr__controls__item:hover{
+// 	background:  #F2994A !important;
+// }

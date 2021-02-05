@@ -14,15 +14,22 @@
 						<span class="title">
 							Записаться на пробный урок
 						</span>
-						<form>
+						<form @submit.prevent="register">
 							<div class="form-group">
-							    <input type="text" class="form-control" placeholder="Ваши ФИО">
+							    <input type="text" class="form-control" placeholder="Ваши ФИО" v-model="form.name">
+							    <invalid-feedback input="name"></invalid-feedback>
 							</div>
 							<div class="form-group">
-							    <input type="text" class="form-control" placeholder="Ваш номер телефона">
+							    <input type="text" 
+								    class="form-control" 
+								    placeholder="Ваш номер телефона" 
+								    v-model="form.phone" 
+								    v-mask="['# (###)-###-##-##']">
+								<invalid-feedback input="phone"></invalid-feedback>
 							</div>
 							<div class="form-group">
-							    <input type="email" class="form-control" placeholder="Ваш e-mail">
+							    <input type="email" class="form-control" placeholder="Ваш e-mail" v-model="form.email">
+							     <invalid-feedback input="email"></invalid-feedback>
 							</div>
 							<!-- <div class="form-group password-wrap">
 							    <input :type="passwordFieldType" class="form-control" placeholder="Придумайте пороль">
@@ -36,7 +43,7 @@
 							</label> -->
 							<div class="btn-wrap">
 								<a href="/login/main" class="login-btn">Войти</a>
-								<button class="btn-main">Отправить заявку</button>
+								<button type="submit" class="btn-main" :disabled="disabled" :class="{'disabled': disabled}">Отправить заявку</button>
 							</div>	
 						</form>	
 						<p class="info">
@@ -63,12 +70,35 @@
 	    data() {
 	        return {
 	            passwordFieldType: 'password',
+	            form:{
+	            	name: '',
+		            phone: '',
+		            email: '',
+	            },
+	           	disabled: false,
 	        }
 	    },
 	    methods: {
 		    switchVisibility() {
 		      this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password'
-		    }
+		    },
+		    async register() {
+	            try {
+	            	const { data, status } = await window.axios.post(route('application.create').url(), this.form);
+	                if(data.status == 'success'){
+	                	this.disabled = true;
+	                	this.$errors.flush();
+	                	this.form.name = '';
+	                	this.form.phone = '';
+	                	this.form.email = '';
+
+	                	this.$modal.show('successModel');
+
+	                }
+	            } catch (e) {
+	                
+	            }
+	        },
 		}
 	}
 
@@ -102,7 +132,6 @@
 		padding: 8px 0px;
 		border:none;
 		border-bottom:1px solid #CFD6DD;
-		margin-bottom: 38px; 
 		font-family: 'Inter', sans-serif;
 		font-size: 18px;
 		line-height: 36px;
@@ -112,6 +141,9 @@
 	.form-control:placeholder{
 		color: #7B838B;
 	}	
+	.form-group{
+		margin-bottom: 38px; 
+	}
 	.btn-wrap{
 		display: flex;
 		width: 100%;
@@ -168,5 +200,10 @@
 		.register-poster{
 			height: 200px;
 		}
+	}
+
+	.btn-main.disabled{
+		pointer-events: none;
+		opacity: .8;
 	}
 </style>

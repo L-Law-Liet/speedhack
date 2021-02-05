@@ -25,5 +25,7 @@ class DatabaseSeeder extends Seeder
             ProgramSeeder::class,
             LessonSeeder::class,
         ]);
+        // \App\Models\User::factory(10)->create();
+        $this->call(ApplicationStatusSeeder::class);
     }
 }

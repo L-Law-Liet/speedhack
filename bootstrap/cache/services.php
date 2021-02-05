@@ -58,6 +58,7 @@
     54 => 'App\\Providers\\RouteServiceProvider',
     55 => 'App\\Providers\\FortifyServiceProvider',
     56 => 'App\\Providers\\JetstreamServiceProvider',
+    57 => 'App\\Providers\\SendEmailServiceProvider',
   ),
   'eager' => 
   array (
@@ -104,6 +105,7 @@
     40 => 'App\\Providers\\RouteServiceProvider',
     41 => 'App\\Providers\\FortifyServiceProvider',
     42 => 'App\\Providers\\JetstreamServiceProvider',
+    43 => 'App\\Providers\\SendEmailServiceProvider',
   ),
   'deferred' => 
   array (

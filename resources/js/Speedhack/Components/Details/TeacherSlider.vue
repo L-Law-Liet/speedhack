@@ -4,7 +4,7 @@
 			<div class="teacher-slider">
 				<div class="wrap-header">
 					<block-title
-		            title="Выбери курсы которые тебе нравится"
+		            title="Выбери курсы, которые тебе нравятся"
 		            subtitle="Онлайн программы, чтобы изучить один конкретный навык"
 		        	></block-title>
 

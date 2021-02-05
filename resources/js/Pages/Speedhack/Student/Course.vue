@@ -10,6 +10,23 @@
     		</section>
 
     		<section class="overview-wrap">
+          <div class="item">
+            <vue-circle
+              :progress="70"
+              :size="100"
+              :reverse="false"
+              line-cap="round"
+              :fill="fill"
+              empty-fill="#BEC3C7"
+              :animation-start-value="0.0"
+              :start-angle="11"
+              insert-mode="append"
+              :thickness="5"
+              :show-percent="true"
+              >
+              
+            </vue-circle>
+          </div>
     			<div class="item">
     				<img src="/images/icons/file-text.svg">
     				<div class="text-wrap">
@@ -51,16 +68,19 @@
     </student-layout>
 </template>
 <script>
+  import VueCircle from 'vue2-circle-progress';
 	import LessonCollapse from '@/Speedhack/Components/Account/LessonCollapse';
 
 	export default {
 	   
 	    components: {
-	    	LessonCollapse
+	    	LessonCollapse,
+        VueCircle
 	    },
 	    data() {
 	        return {
 	        	h: 'fds',
+            fill : { gradient: ["#F2994A", "#F2994A","#003ECB", "#003ECB"] },
 	    		lessons:[
            			{
            				title: "Introduction",
@@ -182,6 +202,7 @@
 		padding-right: 60px;
 		padding-left: 60px;
 		padding-bottom: 26px;
+    align-items: center;
 	}
 
 	.overview-wrap .item{

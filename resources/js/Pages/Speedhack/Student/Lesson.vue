@@ -4,13 +4,20 @@
     		<div class="account-title">
     			<img src="/images/icons/arrow-left-blue.svg"><span>Раздел 1: Introduction</span>
     		</div>
-    	
-        <section class="lesson-wrap">
+    	 
+      <section class="lesson-wrap">
           <section class="video-wrap">
               <div class="title">
                 1.1 Present Simple
               </div>
-              <div class="video"></div>
+              <div class="video">
+                <vue-plyr>
+                    <video>
+                        <source src="/videos/preview.mp4" type="video/mp4" />
+                        <source src="/videos/preview.ogg" type="video/ogg" />
+                    </video>
+                </vue-plyr>
+              </div>
           </section>
           <section class="class-wrap">
             <class-course></class-course>

@@ -30,5 +30,24 @@ return [
         ],
     ],
 
+    'application' => [
+        'title' => 'Applications',
+
+        'actions' => [
+            'index' => 'Applications',
+            'create' => 'New Application',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            'phone' => 'Phone',
+            'email' => 'Email',
+            'status_id' => 'Status',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="indicator two">
-			<button class="btn-icon heart"><img src="/images/icons/heart.svg"></button>
+			<button class="btn-icon heart"><img src="/images/icons/messenger.svg"></button>
 			<button class="btn-icon bell active" @click="modalShow = !modalShow">
 				<img src="/images/icons/bell.svg">
 				<div class="message-modal-wrap">

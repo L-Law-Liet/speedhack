@@ -36,10 +36,10 @@
 			    						<span>{{ item.customData.teacher }}</span>
 			    					</div>
 
-			    					<div class="item">
+			    					<!-- <div class="item">
 			    						<b>Номер телефона</b>
 			    						<span>{{ item.customData.phone }}</span>
-			    					</div>
+			    					</div> -->
 
 			    					<div class="item">
 			    						<b>E-mail учителя</b>

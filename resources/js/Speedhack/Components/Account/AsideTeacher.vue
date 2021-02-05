@@ -2,13 +2,13 @@
 	<aside class="ponel-wrap" :class="{'active': activeClass}">
 		<div class="avatar-wrap">
 			<div class="avatar-small">
-				<img src="/images/users/avatar-1.jpg">
+				<img src="/images/users/woman.jpg">
 			</div>
 			<div class="avatar-big">
-				<img src="/images/users/avatar-1.jpg">
+				<img src="/images/users/woman.jpg">
 			</div>	
 			<div class="name-wrap">
-				<span class="name">Нурбеков Еркебулан</span>
+				<span class="name">Айсауле Азаматова</span>
 				<span class="subtitle">Твой аккаунт</span>
 			</div>
 		</div>

@@ -11,7 +11,7 @@
 					<div class="content">
 						<span class="title">Вы получите сертификат</span>
 						<span class="text">После окончания курса вы получите Сертификат.
-							Данный сертификат будет подтверждением тому, что вы успешно прошли 3.5-месячную обучающую программу по курсу “General English” в онлайн-школе “SpeedHuck”.</span>
+							Данный сертификат будет подтверждением тому, что вы успешно прошли 3.5-месячную обучающую программу по курсу “General English” в онлайн-школе “SpeedHack”.</span>
 						<button class="btn-main" @click="showFormReguestModal">Начать курс</button>
 					</div>
 				</div>

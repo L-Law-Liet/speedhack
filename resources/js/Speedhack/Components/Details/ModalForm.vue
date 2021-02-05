@@ -6,7 +6,11 @@
             <form @submit.prevent="submit" class="form-wrap">
                 <div class="form-group">
                     <label>Ваши ФИО</label>
-                    <input required type="text" class="form-control" placeholder="Номер телефона или логин">
+                    <input required type="text" class="form-control" placeholder="Введите ФИО">
+                </div>
+                <div class="form-group">
+                    <label>Ваш номер телефона</label>
+                    <input required type="text" class="form-control" placeholder="Введите номер телефона">
                 </div>
                 <div class="form-group">
                     <label>Ваш e-mail</label>

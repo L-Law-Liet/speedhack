@@ -32,7 +32,7 @@
 			            </tr>
 			        </table>
 		        </div>
-		        <a class="btn-next"> Загружить еще </a>
+		        <a class="btn-next"> Загрузить еще </a>
     		</section>
     	</section>
     </teacher-layout>

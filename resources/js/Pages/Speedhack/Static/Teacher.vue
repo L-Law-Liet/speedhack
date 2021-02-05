@@ -1,7 +1,7 @@
 <template>
     <welcome-layout>
         <section class="welcome-banner">
-            <div class="container">
+            <div class="container" ref="infoBox">
                 <header-welcome></header-welcome>
                 <div class="wrap">
                     <div class="content-banner">
@@ -9,8 +9,8 @@
                         открыты для особенных</h1>
                         <span class="subtile">Начните онлайн-обучение вместе с нами. Уже 2300 учеников прошли профессиональное обучение.</span>
                         <div class="button-wrap">
-                            <a @click="showFormReguestModal" class="btn-main">Начать курс</a>
-                            <a href="/all/courses" class="link-main">Посмотреть направления</a>
+                            <a @click="showFormReguestModal" class="btn-main">Оставить заявку на вакансию</a>
+                            <a @click="scrollToCourses" class="link-main">Посмотреть направления</a>
                         </div>
                     </div> 
                     <div class="banner-img">
@@ -64,7 +64,7 @@
         </section>
         <section class="about_page">
             <div class="container">
-                <span class="title">SpeedHuck занимается online-обучением
+                <span class="title">SpeedHack занимается online-обучением
                 основных предметов</span>
                 <span class="subtitle">Вся наша работа направлена на улучшение качества образования, расширение программ обучения и возможностей дать необходимых материалов. Мы создаем современное место, в котором не только интересно учиться также интересно преподавать.</span>
                 <div class="row">
@@ -160,8 +160,15 @@ export default {
     },
     methods: {
         showFormReguestModal(){
-            this.$modal.show('formReguest');
+            this.$modal.show('formReguestTeacher');
         },
+        scrollToCourses() {
+            let height = this.$refs.infoBox.clientHeight;
+            window.scrollTo({
+                top: height,
+                behavior: 'smooth'
+            });
+        }
     }
 }
 </script>
@@ -282,6 +289,10 @@ export default {
     }
     .pt-100{
         padding-top: 100px;
+    }
+
+    .welcome-banner .content-banner{
+        width: 80%;
     }
     @media only screen and (max-width: 767px) {
         .about_page .title{

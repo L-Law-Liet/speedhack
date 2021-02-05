@@ -5,11 +5,19 @@
 
         <modal name="formReguest" 
             :width="450"
-            :height="389"
+            :height="499"
             :adaptive="true"> 
             <modal-form></modal-form>
         </modal>
         
+
+         <modal name="formReguestTeacher" 
+            :width="450"
+            :height="499"
+            :adaptive="true"> 
+            <modal-form-teacher></modal-form-teacher>
+        </modal>
+
 
         <modal name="successModel" 
             :width="450"

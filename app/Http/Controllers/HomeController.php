@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Auth;
 
 class HomeController extends Controller
 {
     public function welcome()
     {
-       return Inertia::render('Speedhack/Static/Welcome');
+        return Inertia::render('Speedhack/Static/Welcome');
     }
 
     public function all_courses(){

@@ -56,7 +56,7 @@
 			<div class="row justify-content-between footer-bottom">
 				<div class="col-12 col-md-3">
 					<div class="text-bottom-left">
-						<span class="text-bottom">2020, Speedhuck</span>
+						<span class="text-bottom">2020, Speedhack</span>
 					</div>
 				</div>
 				<div class="col-12 col-md-3">

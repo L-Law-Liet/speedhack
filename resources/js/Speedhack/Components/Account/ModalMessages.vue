@@ -24,7 +24,7 @@
 	        return {
 	        	messages: [
 	        		{
-	        			img: "/images/users/avatar-1.jpg",
+	        			img: "/images/users/woman.jpg",
 	        			name: "Aidana",
 	        			color: "#A259FF",
 	        			message: "проверил Ваше домашнее задание"

@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\ApplicationController;
 use Inertia\Inertia;
 
 /*
@@ -60,6 +61,11 @@ Route::get('/teacher/homework', [TeacherController::class, 'homework'])->name('t
 Route::get('/teacher/profile', [TeacherController::class, 'profile'])->name('teacher.profile');
 Route::get('/teacher/calendar', [TeacherController::class, 'calendar'])->name('teacher.calendar');
 
+//Route::get('/application/create', [ApplicationController::class, 'calendar'])->name('teacher.calendar');
+Route::prefix('application')->name('application.')->group(function() {
+    Route::post('/create', [ApplicationController::class, 'create'])->name('create');
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
@@ -93,4 +99,22 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
 
 Route::get('{any}', function (){
     return Inertia::render('Speedhack/Static/Error');
+});
+
+
+
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('applications')->name('applications/')->group(static function() {
+            Route::get('/',                                             'ApplicationsController@index')->name('index');
+            Route::get('/create',                                       'ApplicationsController@create')->name('create');
+            Route::post('/',                                            'ApplicationsController@store')->name('store');
+            Route::get('/{application}/edit',                           'ApplicationsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'ApplicationsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{application}',                               'ApplicationsController@update')->name('update');
+            Route::delete('/{application}',                             'ApplicationsController@destroy')->name('destroy');
+        });
+    });
 });

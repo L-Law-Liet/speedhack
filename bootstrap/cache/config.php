@@ -88,7 +88,7 @@
     'url' => 'http://localhost:8000',
     'asset_url' => NULL,
     'timezone' => 'UTC',
-    'locale' => 'en',
+    'locale' => 'ru',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
     'key' => 'base64:ccRcJFDVcEfw3wIpBsnKyWreLTwOGTVeYCsQ3xU7YyA=',
@@ -123,6 +123,7 @@
       25 => 'App\\Providers\\RouteServiceProvider',
       26 => 'App\\Providers\\FortifyServiceProvider',
       27 => 'App\\Providers\\JetstreamServiceProvider',
+      28 => 'App\\Providers\\SendEmailServiceProvider',
     ),
     'aliases' => 
     array (
@@ -161,6 +162,7 @@
       'URL' => 'Illuminate\\Support\\Facades\\URL',
       'Validator' => 'Illuminate\\Support\\Facades\\Validator',
       'View' => 'Illuminate\\Support\\Facades\\View',
+      'SendEmail' => 'App\\Facades\\SendEmailService',
     ),
   ),
   'auth' => 
@@ -300,7 +302,7 @@
         'from' => 
         array (
           'address' => 'zbulanbek@gmail.com',
-          'name' => 'Nuradil',
+          'name' => 'Speedhack',
         ),
       ),
       'slack' => 
@@ -792,7 +794,7 @@
     'from' => 
     array (
       'address' => 'zbulanbek@gmail.com',
-      'name' => 'Nuradil',
+      'name' => 'Speedhack',
     ),
     'markdown' => 
     array (

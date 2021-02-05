@@ -7,7 +7,7 @@
 
     		<div class="event-item">
     			<span class="title">
-		            SpeedHuck online club
+		            SpeedHack online club
 		        </span>
 
     			<div class="video"></div>

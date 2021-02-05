@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<span class="last_word"> {{ last_word }} </span>
-		<button class="help-btn"><img src="/images/icons/help.svg"></button>
+		<!-- <button class="help-btn"><img src="/images/icons/help.svg"></button> -->
 	</div>
 </template>
 <script>

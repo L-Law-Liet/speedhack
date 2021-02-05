@@ -1,25 +1,42 @@
 <template>
 	<section class="class-carousel-wrap">
 		<VueSlickCarousel  ref="carousel" v-bind="settings">
-			<template v-for="item in lessons">
-				<div class="carousel-item">
-					<div class="title-lesson"> <span>{{ item.title }}</span></div>
-					<ul class="lesson-wrap">
-						<template v-for="(i, index) in item.lessons">
-							<li class="item">
-								<span class="title"> <b>{{ index + 1 }}. </b> <img src="/images/icons/reading-book.svg"> {{ i.title }} </span>
-								<div class="conent-wrap">
-									<div class="img"><img :src="i.img"></div>
-									<p class="text">
-										{{ i.text }}
-									</p>
-									
-								</div>
-							</li>
-						</template>
-					</ul>
-				</div>
-			</template>
+			<div class="carousel-item">
+				<div class="title-lesson"> <span>{{ lessons[0].title }}</span></div>
+				<ul class="lesson-wrap">
+					<template v-for="(i, index) in lessons[0].lessons">
+						<li class="item">
+							<span class="title"> <b>{{ index + 1 }}. </b> <img src="/images/icons/reading-book.svg"> {{ i.title }} </span>
+							<div class="conent-wrap">
+								<div class="img"><img :src="i.img"></div>
+								<p class="text">
+									{{ i.text }}
+								</p>
+							</div>
+						</li>
+					</template>
+				</ul>
+			</div>
+			<div class="test-wrap">
+				<div class="text-test">Match the questions and answers</div>
+	    		<div class="example"> <i>Example:</i> <b>Do</b> you drink black tea? </div>
+	    		<section class="test">
+	    			<template v-for="(item, key) in lists">
+		    			<div class="wrap-test-item"> <span class="key"> {{ key + 1 }}. </span> <drag :test="item"></drag></div>
+		    		</template>
+	    		</section>
+	    		<div class="buttons-wrap">
+		    		<button class="btn-prev">
+		    			<img src="/images/icons/arr-white-test.svg">
+		    			Previous
+		    		</button>
+		    		<button class="btn-next">
+		    			Next
+		    			<img src="/images/icons/arr-black.svg">
+		    		</button>
+		    	</div>
+			</div>
+			
 		</VueSlickCarousel>
 	</section>
 </template>
@@ -28,6 +45,7 @@
 	import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 	// optional style for arrows & dots
 	import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+	import Drag from '@/Speedhack/Components/Test/ThreeDrag';
 
 export default {
     props: {
@@ -35,6 +53,7 @@ export default {
     },
 	components: {
       	VueSlickCarousel,
+      	Drag,
     },
     data() {
         return {
@@ -48,6 +67,11 @@ export default {
 			  	"slidesToShow": 1,
 			  	"slidesToScroll": 1,
 			},
+			lists: [
+        		{ text: "#??# your sister work in a school?"},
+		       	{ text: '"Does Jim live near here?" "No, he? #??# .'},
+		        { text: "What #??# your parents do?"},
+        	],
 			lessons:[
 				{
 					title: "Happy families day!",
@@ -164,7 +188,92 @@ export default {
 		object-fit: cover;
 	}
 
-	
+	.text-test{
+		font-family: 'Inter', sans-serif;
+		font-weight: 500;
+		font-size: 24px;
+		color: #003ECB;
+		margin-left: 10px;
+		margin-bottom: 20px;
+		
+
+	}
+	.example{
+		background: #EEFADE;
+		border-radius: 8px;
+		padding: 16px;
+		margin-left: 10px;
+		margin-right: 10px;
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		color: #050A1C;
+		margin-bottom: 30px;
+	}
+
+	.wrap-test-item{
+		display: flex;
+		margin-bottom: 20px;
+	 	align-items: center;
+	}
+	.wrap-test-item .key{
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		color: #050A1C;
+		margin-right: 6px;
+	}
+
+	.example i{
+		font-style: italic;
+	}
+	.example b{
+		display: inline-block;
+		padding: 2px 11px;
+		background: #D5F0B0;
+		border-radius: 8px; 
+		margin-right: 16px;
+		margin-left: 30px;
+	}
+	.test-wrap{
+		background-color: #fff;
+		padding: 15px;
+		padding-top: 20px;
+		border-radius: 8px;
+	}
+
+	.buttons-wrap{
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+    	margin-top: 20px;
+    	font-size: 14px;
+    	color: #fff;
+	}
+	.btn-prev img{
+		margin-right: 10px;
+	}
+	.btn-prev{
+		background-color: #F2994A;
+		border-radius:  12px;
+		margin-right: 24px;
+		padding: 6px 20px;
+		color: #fff;
+		display: flex;
+		
+	}
+
+	.btn-next img{
+		margin-left: 10px;
+	}
+	.btn-next{
+		background-color: rgba(208, 208, 208, 0.56);
+		border-radius:  12px;
+		margin-left: 24px;
+		padding: 6px 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 118px;
+	}
 </style>
 
 

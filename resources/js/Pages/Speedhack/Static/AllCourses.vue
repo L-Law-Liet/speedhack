@@ -2,7 +2,7 @@
 	<welcome-layout>
 		<header-white></header-white>
 		<bread :breads="breads"></bread>
-		
+
 		<div class="container">
 	        <div class="wrap-center">
 	            <span class="title-center">Наши курсы</span>
@@ -18,8 +18,8 @@
 			      			<template v-for="item in courses">
 			      				<div class="col-12  col-md-6 col-lg-4">
 			      					<item-course-block :course="item"></item-course-block>
-					                
-					            </div> 
+
+					            </div>
 			      			</template>
 			        	</div>
 	    			</b-tab>
@@ -32,8 +32,8 @@
 			      			<template v-for="item in courses2">
 			      				<div class="col-12 col-md-6 col-lg-4 ">
 			      					<item-course-block :course="item"></item-course-block>
-					                
-					            </div> 
+
+					            </div>
 			      			</template>
 			        	</div>
 	    			</b-tab>
@@ -51,7 +51,7 @@
 
 	export default {
 	    props: {
-	      
+
 	    },
 	    components: {
 	        HeaderWhite,
@@ -63,7 +63,7 @@
 	        return {
 	           courses: [
 	           		{
-	           			text: "",
+	           			text: "фыва",
 	           			img: "/images/ilustration/course-1.png",
 	           			title: "Подготовка к IELTS",
 	           			date: "18 месяцев",
@@ -99,7 +99,7 @@
 	        }
 	    },
 	    methods: {
-		    
+
 		}
 	}
 </script>
@@ -135,5 +135,5 @@
 		justify-content: center;
 		align-items: center;
 	}
-	
+
 </style>

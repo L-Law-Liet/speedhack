@@ -22,11 +22,11 @@
 	    		</section>
 
 	    		<div class="buttons-wrap">
-		    		<button class="btn-prev">
+		    		<button onclick="window.location='/test/two'" class="btn-prev">
 		    			<img src="/images/icons/arr-white-test.svg">
 		    			Previous
 		    		</button>
-		    		<button class="btn-next">
+		    		<button onclick="window.location='/test/four'" class="btn-next">
 		    			Next
 		    			<img src="/images/icons/arr-black.svg">
 		    		</button>
@@ -135,7 +135,7 @@
 		display: inline-block;
 		padding: 2px 11px;
 		background: #D5F0B0;
-		border-radius: 8px; 
+		border-radius: 8px;
 		margin-right: 16px;
 		margin-left: 30px;
 	}
@@ -156,7 +156,7 @@
 		margin-right: 24px;
 		padding: 6px 20px;
 		color: #fff;
-		
+
 	}
 
 	.btn-next img{
@@ -174,7 +174,7 @@
 	}
 
 	@media only screen and (max-width: 768px) {
-		
+
 		.tab-wrap{
 			padding-right: 20px;
     		padding-left: 20px;

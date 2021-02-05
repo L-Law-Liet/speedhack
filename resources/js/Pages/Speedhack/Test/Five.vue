@@ -49,11 +49,11 @@
         		</section>
 
 	    		<div class="buttons-wrap">
-		    		<button class="btn-prev">
+		    		<button onclick="window.location='/test/four'" class="btn-prev">
 		    			<img src="/images/icons/arr-white-test.svg">
 		    			Previous
 		    		</button>
-		    		<button class="btn-next">
+		    		<button onclick="window.location='/result'" class="btn-next">
 		    			Next
 		    			<img src="/images/icons/arr-black.svg">
 		    		</button>
@@ -71,7 +71,7 @@
 		},
 	    data() {
 	        return {
-	        	
+
 			}
 	    }
 	}
@@ -143,7 +143,7 @@
 		margin-right: 24px;
 		padding: 6px 20px;
 		color: #fff;
-		
+
 	}
 	.btn-next img{
 		margin-left: 10px;
@@ -170,7 +170,7 @@
 	    font-family: "Inter", sans-serif;
 	    font-size: 18px;
 	    color: #050A1C;
-	}	
+	}
 	.title .key{
 		margin-right: 16px;
 	}
@@ -196,7 +196,7 @@
 	}
 	.custom-radio.error .custom-control-label::before{
 		border-color: red;
-	}	
+	}
 	.custom-radio.error .custom-control-input:checked ~ .custom-control-label[data-v-644b22e2]::before{
 		border-color: #3BA972;
 	}

@@ -11,7 +11,7 @@
 				<a>Для кого</a>
 				<transition name="fade">
 				<div class="h-dropdown" v-if="teacherActive"   @click="teacherActive = false">
-					<a href="/">Стать учеником</a>
+					<a href="/student">Стать учеником</a>
 					<a href="/teacher">Стать учителем</a>
 					<a href="/">Компаниям</a>
 				</div>
@@ -20,11 +20,11 @@
 			<li class="item" @click="showLoginModal"><a> <img src="/images/icons/log-in.svg"> Войти</a></li>
 		</ul>
 		<button @click="toggleMenu" class="menu-btn"><img src="/images/icons/menu-mobile.svg"></button>
-		
-		<modal name="loginModel" 
+
+		<modal name="loginModel"
             :width="450"
             :height="500"
-            :adaptive="true"> 
+            :adaptive="true">
             <login-modal></login-modal>
         </modal>
 
@@ -51,7 +51,7 @@
         	this.$modal.show('loginModel');
         },
         showDropdown: function(){
-            this.teacherActive = !this.teacherActive;   
+            this.teacherActive = !this.teacherActive;
         }
     },
    	}
@@ -90,12 +90,12 @@
 	.menu-btn{
 		display: none;
 		background-color: transparent;
-		
+
 	}
 	.header-welcome .links .item:hover{
 		cursor: pointer;
 	}
-	
+
 	.menu-btn img{
 		width: 35px;
 		height: 35px;
@@ -171,7 +171,7 @@
 			position: inherit;
 			width: 100%;
 		}
-		
+
 		@keyframes fade-in {
 		  from {
 		    opacity: 0;

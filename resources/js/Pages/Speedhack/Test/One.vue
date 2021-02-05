@@ -25,7 +25,7 @@
 	    			<img src="/images/icons/arr-white-test.svg">
 	    			Previous
 	    		</button>
-	    		<button class="btn-next">
+	    		<button onclick="window.location='/test/two'" class="btn-next">
 	    			Next
 	    			<img src="/images/icons/arr-black.svg">
 	    		</button>
@@ -147,7 +147,7 @@
 		margin-right: 24px;
 		padding: 6px 20px;
 		color: #fff;
-		
+
 	}
 
 	.btn-next img{
@@ -187,6 +187,6 @@
 		.bg-account{
 			flex-direction: column;
 		}
-		
+
 	}
 </style>

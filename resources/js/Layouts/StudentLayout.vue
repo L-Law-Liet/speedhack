@@ -4,10 +4,9 @@
         <div class="wrap-content">
             <aside-student :activeClass="activeClass"></aside-student>
             <section class="content-wrap" :class="{'active': activeClass}">
-                <slot></slot>  
+                <slot></slot>
             </section>
         </div>
-       
         <footer-main></footer-main>
     </section>
 </template>

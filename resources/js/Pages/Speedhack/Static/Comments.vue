@@ -11,16 +11,16 @@
                             <a class="btn-main" @click="showFormReguestModal">Начать курс</a>
                             <a href="/all/courses" class="link-main">Посмотреть курсы</a>
                         </div>
-                    </div> 
+                    </div>
                     <div class="banner-img">
                         <img src="/images/ilustration/banner-4.png">
-                    </div>  
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="comments-block">
-            <block-title 
+            <block-title
                 title="Отзывы"
                 subtitle="Предлагаем вам почитать отзывы наших учеников"
             ></block-title>
@@ -30,7 +30,7 @@
                     <stars :count="stars"></stars>
                     <span class="info">84 оценок</span>
                 </div>
-                
+
                  <div class="commnets-wrap" v-if="commnets.length > 4">
                     <VueSlickCarousel  ref="carousel" v-bind="settings" @afterChange="currentSlider($event)">
                         <template v-for="comment in chunked">
@@ -53,7 +53,7 @@
                 </div>
 
 
-                
+
                 <div class="commnets-wrap" v-else>
                     <template v-for="item in commnets">
                         <item-comment

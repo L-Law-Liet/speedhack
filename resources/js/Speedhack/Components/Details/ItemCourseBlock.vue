@@ -4,7 +4,7 @@
         <div class="wrap">
             <p class="title">{{ course.title }}</p>
             <div class="img">
-                 <img :src="course.img">  
+                 <img :src="course.img">
             </div>
         </div>
         <span class="text">{{ course.date }}</span>

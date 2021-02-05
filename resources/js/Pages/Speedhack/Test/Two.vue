@@ -16,11 +16,11 @@
 	    	<div class="text-test">Match the questions and answers</div>
 	    	<drag :first_column="lists_1" :secound_column="lists_2"></drag>
 	    	<div class="buttons-wrap">
-	    		<button class="btn-prev">
+	    		<button onclick="window.location='/test/one'" class="btn-prev">
 	    			<img src="/images/icons/arr-white-test.svg">
 	    			Previous
 	    		</button>
-	    		<button class="btn-next">
+	    		<button onclick="window.location='/test/three'" class="btn-next">
 	    			Next
 	    			<img src="/images/icons/arr-black.svg">
 	    		</button>
@@ -123,7 +123,7 @@
 		margin-right: 24px;
 		padding: 6px 20px;
 		color: #fff;
-		
+
 	}
 
 	.btn-next img{
@@ -158,6 +158,6 @@
 			padding-bottom: 100px;
 			flex-direction: column;
 		}
-		
+
 	}
 </style>

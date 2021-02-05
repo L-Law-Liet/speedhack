@@ -27,6 +27,12 @@
 					<b class="ball">7.0</b>
 				</li>
 
+                <li class="item current">
+                    <img src="/images/icons/check-black.svg">
+                    <span class="title">Test questions</span>
+                    <b class="ball">7.0</b>
+                </li>
+
 				<li class="item done">
 					<img src="/images/icons/flag.svg">
 					<span class="title">Answer the questuions</span>

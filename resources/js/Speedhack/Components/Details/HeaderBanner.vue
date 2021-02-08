@@ -11,9 +11,9 @@
 				<a>Для кого</a>
 				<transition name="fade">
 				<div class="h-dropdown" v-if="teacherActive"   @click="teacherActive = false">
-					<a href="/student">Стать учеником</a>
-					<a href="/teacher">Стать учителем</a>
-					<a href="/">Компаниям</a>
+					<a href="/" class="item-wrap"><img src="/images/icons/student-h.svg"> Стать учеником</a>
+					<a href="/teacher" class="item-wrap"><img src="/images/icons/teacher-h.svg"> Стать учителем</a>
+					<a href="/" class="item-wrap"> <img src="/images/icons/company-h.svg"> Компаниям</a>
 				</div>
 				</transition>
 			</li>
@@ -106,7 +106,7 @@
 	.teacher .h-dropdown{
 		position: absolute;
 		top: auto;
-		width: 180px;
+		width: 200px;
 		left: 0px;
 		background-color: #fff;
 		border-radius: 5px;
@@ -135,6 +135,17 @@
 	  opacity: 0;
 	}
 
+	.h-dropdown a img{
+		width: 30px;
+		height: 28px;
+		margin-right: 10px;
+	}
+	
+	.h-dropdown .item-wrap{
+		display: flex !important;
+		font-size: 16px !important;
+		align-items: center !important;
+	}
 
 	@media only screen and (max-width: 768px) {
 		.header-welcome .links{
@@ -181,4 +192,6 @@
 		  }
 		}
 	}
+	
+
 </style>

@@ -9,6 +9,7 @@ use App\Http\Requests\Admin\Application\IndexApplication;
 use App\Http\Requests\Admin\Application\StoreApplication;
 use App\Http\Requests\Admin\Application\UpdateApplication;
 use App\Models\Application;
+use App\Models\ApplicationStatus;
 use Brackets\AdminListing\Facades\AdminListing;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -40,7 +41,11 @@ class ApplicationsController extends Controller
             ['id', 'name', 'phone', 'email', 'status_id'],
 
             // set columns to searchIn
-            ['id', 'name', 'phone', 'email', 'status_id']
+            ['id', 'name', 'phone', 'email', 'status_id'],
+
+            function ($query) use ($request) {
+                $query->with(['status']);
+            }
         );
 
         if ($request->ajax()) {
@@ -114,9 +119,13 @@ class ApplicationsController extends Controller
     {
         $this->authorize('admin.application.edit', $application);
 
-
+        $application_status = ApplicationStatus::select('name')->get();
+        
+    
         return view('admin.application.edit', [
             'application' => $application,
+            'application_status' => $application_status,
+            'status' => $application->status,
         ]);
     }
 
@@ -129,18 +138,23 @@ class ApplicationsController extends Controller
      */
     public function update(UpdateApplication $request, Application $application)
     {
+
         // Sanitize input
         $sanitized = $request->getSanitized();
-
+        $status_id = ApplicationStatus::where('name', $request->status['name'])->first()->id;
+       
         // Update changed values Application
         $application->update($sanitized);
+        $application->status_id = $status_id;
+        $application->save();
 
         if ($request->ajax()) {
             return [
                 'redirect' => url('admin/applications'),
                 'message' => trans('brackets/admin-ui::admin.operation.succeeded'),
             ];
-        }
+        }   
+
 
         if($application->status->name == "Успешно"){
             $password = SendEmail::generatePassword(8);

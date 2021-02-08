@@ -47,7 +47,8 @@ class HomeController extends Controller
 
     public function news()
     {
-       return Inertia::render('Speedhack/Static/News');
+        $news = News::all();
+        return Inertia::render('Speedhack/Static/News', compact('news'));
     }
 
     public function news_item(News $news)

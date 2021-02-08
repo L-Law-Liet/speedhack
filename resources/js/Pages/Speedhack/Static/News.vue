@@ -46,6 +46,9 @@ import BlockTitle from '@/Speedhack/Components/Details/BlockTitle';
 import ItemNews from '@/Speedhack/Components/Details/ItemNews';
 
 export default {
+    props: {
+      news: Array,
+    },
     components: {
         HeaderWelcome,
         FormRequest,
@@ -54,38 +57,6 @@ export default {
     },
     data() {
         return {
-            news: [
-                {
-                    img: "/images/ilustration/news-1.jpg",
-                    date: "22 сентябрь, 2020",
-                    title: "Онлайн обучение",
-                    text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-                },
-                {
-                    img: "/images/ilustration/news-2.jpg",
-                    date: "22 сентябрь, 2020",
-                    title: "Онлайн обучение",
-                    text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-                },
-                {
-                    img: "/images/ilustration/news-3.jpg",
-                    date: "22 сентябрь, 2020",
-                    title: "Онлайн обучение",
-                    text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-                },
-                {
-                    img: "/images/ilustration/news-4.jpg",
-                    date: "22 сентябрь, 2020",
-                    title: "Онлайн обучение",
-                    text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-                },
-                {
-                    img: "/images/ilustration/news-4.jpg",
-                    date: "22 сентябрь, 2020",
-                    title: "Онлайн обучение",
-                    text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-                },
-            ]
         }
     },
     methods: {

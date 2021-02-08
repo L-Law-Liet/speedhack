@@ -47,35 +47,6 @@
 	    },
 	    data() {
 	        return {
-	           courses: [
-	           		{
-	           			text: "фыва",
-	           			img: "/images/ilustration/course-1.png",
-	           			title: "Подготовка к IELTS",
-	           			date: "18 месяцев",
-	           		},
-	           		{
-	           			text: "",
-	           			img: "/images/ilustration/course-2.png",
-	           			title: "General English",
-	           			date: "18 месяцев",
-	           		},
-           		],
-
-           		courses2: [
-	           		{
-	           			text: "",
-	           			img: "/images/ilustration/course-1.png",
-	           			title: "Общий",
-	           			date: "18 месяцев",
-	           		},
-	           		{
-	           			text: "",
-	           			img: "/images/ilustration/course-2.png",
-	           			title: "Для экзамена на гос. структуры",
-	           			date: "18 месяцев",
-	           		},
-           		],
            		breads: [
 	           		{
 	           			title: "Главная",

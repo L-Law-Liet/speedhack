@@ -49,20 +49,20 @@
     'use_routes' => true,
     'scanned_directories' => 
     array (
-      0 => '/Applications/MAMP/htdocs/speedhack/app',
-      1 => '/Applications/MAMP/htdocs/speedhack/resources/views',
-      2 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-auth/src',
-      3 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-auth/resources',
-      4 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-ui/resources',
-      5 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-translations/resources',
-      6 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-auth/src',
-      7 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-auth/resources',
-      8 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-ui/resources',
-      9 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-translations/resources',
-      10 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-auth/src',
-      11 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-auth/resources',
-      12 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-ui/resources',
-      13 => '/Applications/MAMP/htdocs/speedhack/vendor/brackets/admin-translations/resources',
+      0 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\app',
+      1 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\resources\\views',
+      2 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-auth/src',
+      3 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-auth/resources',
+      4 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-ui/resources',
+      5 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-translations/resources',
+      6 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-auth/src',
+      7 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-auth/resources',
+      8 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-ui/resources',
+      9 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-translations/resources',
+      10 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-auth/src',
+      11 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-auth/resources',
+      12 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-ui/resources',
+      13 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor/brackets/admin-translations/resources',
     ),
   ),
   'advanced-logger' => 
@@ -74,7 +74,7 @@
       array (
         0 => 'Brackets\\AdvancedLogger\\Handlers\\RequestLoggerHandler',
       ),
-      'file' => '/Applications/MAMP/htdocs/speedhack/storage/logs/request.log',
+      'file' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\logs/request.log',
       'level' => 'info',
       'format' => 'full',
       'excluded-paths' => 
@@ -89,13 +89,13 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost:8000',
+    'url' => 'http://speedhack.loc',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'ru',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:ccRcJFDVcEfw3wIpBsnKyWreLTwOGTVeYCsQ3xU7YyA=',
+    'key' => 'base64:wW1qIpQ92MkwqoCM+G4CDv2pj86tvRFi/z5r494JnMU=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -242,12 +242,12 @@
         array (
           'include' => 
           array (
-            0 => '/Applications/MAMP/htdocs/speedhack',
+            0 => 'D:\\OpenServer\\domains\\nidge\\speedhack',
           ),
           'exclude' => 
           array (
-            0 => '/Applications/MAMP/htdocs/speedhack/vendor',
-            1 => '/Applications/MAMP/htdocs/speedhack/node_modules',
+            0 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\vendor',
+            1 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\node_modules',
           ),
           'follow_links' => false,
           'ignore_unreadable_directories' => false,
@@ -268,7 +268,7 @@
           0 => 'local',
         ),
       ),
-      'temporary_directory' => '/Applications/MAMP/htdocs/speedhack/storage/app/backup-temp',
+      'temporary_directory' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\app/backup-temp',
     ),
     'notifications' => 
     array (
@@ -305,8 +305,8 @@
         'to' => 'your@example.com',
         'from' => 
         array (
-          'address' => 'zbulanbek@gmail.com',
-          'name' => 'Speedhack',
+          'address' => NULL,
+          'name' => 'Laravel',
         ),
       ),
       'slack' => 
@@ -408,7 +408,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/Applications/MAMP/htdocs/speedhack/storage/framework/cache/data',
+        'path' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -441,8 +441,8 @@
       'dynamodb' => 
       array (
         'driver' => 'dynamodb',
-        'key' => NULL,
-        'secret' => NULL,
+        'key' => '',
+        'secret' => '',
         'region' => 'us-east-1',
         'table' => 'cache',
         'endpoint' => NULL,
@@ -495,12 +495,12 @@
       array (
         'driver' => 'mysql',
         'url' => NULL,
-        'host' => 'localhost',
-        'port' => '8889',
+        'host' => '127.0.0.1',
+        'port' => '3306',
         'database' => 'speedhack',
         'username' => 'root',
         'password' => 'root',
-        'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
+        'unix_socket' => '',
         'charset' => 'utf8',
         'collation' => 'utf8_general_ci',
         'prefix' => '',
@@ -515,8 +515,8 @@
       array (
         'driver' => 'pgsql',
         'url' => NULL,
-        'host' => 'localhost',
-        'port' => '8889',
+        'host' => '127.0.0.1',
+        'port' => '3306',
         'database' => 'speedhack',
         'username' => 'root',
         'password' => 'root',
@@ -530,8 +530,8 @@
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
-        'host' => 'localhost',
-        'port' => '8889',
+        'host' => '127.0.0.1',
+        'port' => '3306',
         'database' => 'speedhack',
         'username' => 'root',
         'password' => 'root',
@@ -575,45 +575,45 @@
       'media' => 
       array (
         'driver' => 'local',
-        'root' => '/Applications/MAMP/htdocs/speedhack/public/media',
-        'url' => 'http://localhost:8000/media',
+        'root' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\public/media',
+        'url' => 'http://speedhack.loc/media',
       ),
       'media_private' => 
       array (
         'driver' => 'local',
-        'root' => '/Applications/MAMP/htdocs/speedhack/storage/app/media',
+        'root' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage/app/media',
       ),
       'uploads' => 
       array (
         'driver' => 'local',
-        'root' => '/Applications/MAMP/htdocs/speedhack/storage/uploads',
+        'root' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\uploads',
       ),
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/Applications/MAMP/htdocs/speedhack/storage/app',
+        'root' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/Applications/MAMP/htdocs/speedhack/storage/app/public',
-        'url' => 'http://localhost:8000/storage',
+        'root' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\app/public',
+        'url' => 'http://speedhack.loc/storage',
         'visibility' => 'public',
       ),
       's3' => 
       array (
         'driver' => 's3',
-        'key' => NULL,
-        'secret' => NULL,
-        'region' => NULL,
-        'bucket' => NULL,
+        'key' => '',
+        'secret' => '',
+        'region' => 'us-east-1',
+        'bucket' => '',
         'url' => NULL,
         'endpoint' => NULL,
       ),
     ),
     'links' => 
     array (
-      '/Applications/MAMP/htdocs/speedhack/public/storage' => '/Applications/MAMP/htdocs/speedhack/storage/app/public',
+      'D:\\OpenServer\\domains\\nidge\\speedhack\\public\\storage' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\app/public',
     ),
   ),
   'fortify-options' => 
@@ -688,13 +688,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/Applications/MAMP/htdocs/speedhack/storage/logs/laravel.log',
+        'path' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/Applications/MAMP/htdocs/speedhack/storage/logs/laravel.log',
+        'path' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 90,
         'tap' => 
@@ -708,7 +708,7 @@
         'url' => NULL,
         'username' => 'Laravel Log',
         'emoji' => ':boom:',
-        'level' => 'critical',
+        'level' => 'debug',
       ),
       'papertrail' => 
       array (
@@ -748,7 +748,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/Applications/MAMP/htdocs/speedhack/storage/logs/laravel.log',
+        'path' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -760,11 +760,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.mailtrap.io',
-        'port' => '2525',
-        'encryption' => 'tls',
-        'username' => 'ad6d0fc5b5e39d',
-        'password' => '3d8385b2df9ae0',
+        'host' => 'mailhog',
+        'port' => '1025',
+        'encryption' => NULL,
+        'username' => NULL,
+        'password' => NULL,
         'timeout' => NULL,
         'auth_mode' => NULL,
       ),
@@ -797,15 +797,15 @@
     ),
     'from' => 
     array (
-      'address' => 'zbulanbek@gmail.com',
-      'name' => 'Speedhack',
+      'address' => NULL,
+      'name' => 'Laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/Applications/MAMP/htdocs/speedhack/resources/views/vendor/mail',
+        0 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -890,8 +890,8 @@
       'sqs' => 
       array (
         'driver' => 'sqs',
-        'key' => NULL,
-        'secret' => NULL,
+        'key' => '',
+        'secret' => '',
         'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
         'queue' => 'your-queue-name',
         'suffix' => NULL,
@@ -944,8 +944,8 @@
     ),
     'ses' => 
     array (
-      'key' => NULL,
-      'secret' => NULL,
+      'key' => '',
+      'secret' => '',
       'region' => 'us-east-1',
     ),
   ),
@@ -955,7 +955,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/Applications/MAMP/htdocs/speedhack/storage/framework/sessions',
+    'files' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -983,9 +983,9 @@
   array (
     'paths' => 
     array (
-      0 => '/Applications/MAMP/htdocs/speedhack/resources/views',
+      0 => 'D:\\OpenServer\\domains\\nidge\\speedhack\\resources\\views',
     ),
-    'compiled' => '/Applications/MAMP/htdocs/speedhack/storage/framework/views',
+    'compiled' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\framework\\views',
   ),
   'wysiwyg-media' => 
   array (
@@ -1126,7 +1126,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => '/Applications/MAMP/htdocs/speedhack/storage/framework/laravel-excel',
+      'local_path' => 'D:\\OpenServer\\domains\\nidge\\speedhack\\storage\\framework/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,

@@ -1,11 +1,11 @@
 <template>
 	<section class="news-slider">
 		<div class="container">
-			<block-title 
+			<block-title
 	        title="Наши новости"
 	        subtitle="Вся наша работа направлена на улучшение качества образования"
 	    	></block-title>
-		
+
 			<VueSlickCarousel  ref="carousel" v-bind="settings" @afterChange="currentSlider($event)">
 				<template v-for="item in news">
 					<item-news :news="item"></item-news>
@@ -21,7 +21,7 @@
         		</ul>
 	    		<button class="arrow-slider right" @click="showNext"><img src="/images/icons/arrow-left.svg"></button>
 	    	</div>
-		</div>	
+		</div>
 	</section>
 </template>
 <script>
@@ -34,7 +34,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
     props: {
-    
+        news: Array,
     },
 	components: {
       	VueSlickCarousel,
@@ -55,15 +55,15 @@ export default {
 			  	responsive:[
 			  		{
 		            	breakpoint: 1120,
-		                settings: 
-		    			{	
+		                settings:
+		    			{
 		                slidesToShow: 3,
 		                slidesToScroll: 1,
 		                }
 		            },
 		            {
 		                breakpoint: 800,
-		                settings: 
+		                settings:
 		    			{
 		                slidesToShow: 2,
 		                slidesToScroll: 2
@@ -71,7 +71,7 @@ export default {
 		            },
 		            {
 		                breakpoint: 600,
-		                settings: 
+		                settings:
 		    	        {
 		                slidesToShow: 1,
 		                slidesToScroll: 1
@@ -79,38 +79,6 @@ export default {
 		            }
 	    	    ]
 			},
-			news: [
-				{
-					img: "/images/ilustration/news-1.jpg",
-					date: "22 сентябрь, 2020",
-					title: "Онлайн обучение",
-					text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-				},
-				{
-					img: "/images/ilustration/news-2.jpg",
-					date: "22 сентябрь, 2020",
-					title: "Онлайн обучение",
-					text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-				},
-				{
-					img: "/images/ilustration/news-3.jpg",
-					date: "22 сентябрь, 2020",
-					title: "Онлайн обучение",
-					text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-				},
-				{
-					img: "/images/ilustration/news-4.jpg",
-					date: "22 сентябрь, 2020",
-					title: "Онлайн обучение",
-					text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-				},
-				{
-					img: "/images/ilustration/news-4.jpg",
-					date: "22 сентябрь, 2020",
-					title: "Онлайн обучение",
-					text: "У нас открылись курсы по рисованию. Если вы любите рисовать, тогда этот курс именно для вас. Вы просили мы добавили!"
-				},
-			]
         }
     },
     methods: {
@@ -159,5 +127,5 @@ export default {
 	.dots-slider li.active{
 		background: #050A1C;
 	}
-	
+
 </style>

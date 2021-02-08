@@ -7,15 +7,15 @@
 					<div class="col-12 col-md-4">
 						<div class="item">
 							<div class="img">
-								<img :src="item.img">
+								<img :src="item.image">
 							</div>
 							<span class="title">{{ item.title }}</span>
-							<span class="subtitle">{{ item.subtitle }}</span>
-						</div>	
+							<span class="subtitle">{{ item.body }}</span>
+						</div>
 					</div>
 				</template>
 			</div>
-		</div>	
+		</div>
 	</section>
 </template>
 <script>
@@ -56,7 +56,7 @@
 		line-height: 22px;
 		margin-bottom: 16px;
 		display: block;
-	}	
+	}
 	.item .subtitle{
 		font-family: 'Inter', sans-serif;
 		font-size: 16px;

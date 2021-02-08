@@ -2,12 +2,12 @@
 	<section class="wrap-news-slider-item">
 		<div class="item-slider-news">
 			<div class="img">
-				<img :src="news.img">
+				<img :src="news.image">
 			</div>
-			<a href="/news/item" class="wrap-text">
+			<a :href="`/news/item/${news.id}`" class="wrap-text">
 				<span class="date">{{ news.date }}</span>
 				<span class="title">{{ news.title }}</span>
-				<p class="text">{{ news.text }}</p>
+				<p class="text">{{ news.body }}</p>
 			</a>
 		</div>
 	</section>

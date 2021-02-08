@@ -1,90 +1,30 @@
 <template>
 	<div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <a href="/course" class="course-block">
+            <div v-for="course in courses" class="col-md-4">
+                <a :href="`/course/${course.id}`"  class="course-block">
                     <span class="text">Профессия</span>
                     <div class="wrap">
-                        <p class="title">Английский язык</p>
+                        <p class="title">{{ course.title }}</p>
                         <div class="img">
-                             <img src="/images/ilustration/course-1.png">  
+                             <img :src="course.image">
                         </div>
                     </div>
-                    <span class="text">18 месяцев</span>
+                    <span class="text">{{ course.duration }}</span>
                 </a>
-            </div>   
-
-            <div class="col-md-4">
-                <a href="/course" class="course-block">
-                    <span class="text">Профессия</span>
-                    <div class="wrap">
-                        <p class="title">Казахский язык</p>
-                        <div class="img">
-                             <img src="/images/ilustration/course-2.png">  
-                        </div>
-                    </div>
-                    <span class="text">18 месяцев</span>
-                </a>
-            </div>  
-
-            <div class="col-md-4">
-                <a href="/course" class="course-block">
-                    <span class="text">Профессия</span>
-                    <div class="wrap">
-                        <p class="title">Руский язык</p>
-                        <div class="img">
-                             <img src="/images/ilustration/course-3.png">  
-                        </div>
-                    </div>
-                    <span class="text">18 месяцев</span>
-                </a>
-            </div> 
-
-            <div class="col-md-4">
-                <a href="/course" class="course-block">
-                    <span class="text">Профессия</span>
-                    <div class="wrap">
-                        <p class="title">Физика</p>
-                        <div class="img">
-                             <img src="/images/ilustration/course-4.png">  
-                        </div>
-                    </div>
-                    <span class="text">18 месяцев</span>
-                </a>
-            </div> 
-
-            <div class="col-md-4">
-                <a href="/course" class="course-block">
-                    <span class="text">Профессия</span>
-                    <div class="wrap">
-                        <p class="title">Математика</p>
-                        <div class="img">
-                             <img src="/images/ilustration/course-5.png">  
-                        </div>
-                    </div>
-                    <span class="text">18 месяцев</span>
-                </a>
-            </div> 
-            <div class="col-md-4">
-                <a href="/course" class="course-block">
-                    <span class="text">Профессия</span>
-                    <div class="wrap">
-                        <p class="title">Химия</p>
-                        <div class="img">
-                             <img src="/images/ilustration/course-6.png">  
-                        </div>
-                    </div>
-                    <span class="text">18 месяцев</span>
-                </a>
-            </div> 
-        </div> 
+            </div>
+        </div>
         <div class="wrap-center">
         	<a href="/all/courses" class="btn-show-more">Показать еще</a>
-        </div>   
+        </div>
     </div>
 </template>
 <script>
-	
+	export default {
+	    props: {
+	        courses: Array,
+        },
+    }
 </script>
 <style scoped>
 	.course-block{
@@ -110,7 +50,7 @@
 		align-items: center;
 		justify-content: space-between;
 	}
-	
+
 
 	.course-block .wrap .title{
 		font-family: 'Inter', sans-serif;

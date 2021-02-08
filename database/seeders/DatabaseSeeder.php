@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            CourseCategorySeeder::class,
+//            CourseCategorySeeder::class,
             CourseSeeder::class,
             CertificateSeeder::class,
             NewsSeeder::class,
@@ -25,7 +25,6 @@ class DatabaseSeeder extends Seeder
             ProgramSeeder::class,
             LessonSeeder::class,
         ]);
-        // \App\Models\User::factory(10)->create();
         $this->call(ApplicationStatusSeeder::class);
     }
 }

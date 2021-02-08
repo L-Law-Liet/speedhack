@@ -2,11 +2,11 @@
 	<div class="comment-item">
 		<div class="users-wrap">
 			<div class="avatar">
-				<img :src="comment.img">
+				<img :src="comment.image">
 			</div>
 			<div class="wrap">
 				<span class="name">{{ comment.name }}</span>
-				<stars :count="comment.stars"></stars>
+				<stars :count="comment.rate"></stars>
 			</div>
 		</div>
 		<div class="text-wrap">
@@ -18,9 +18,9 @@
 			</div>
 			<a class="read-more" v-if="comment.text.length > 300 && summary" @click="summary = false">Читать далее</a>
 			<p class="date">
-				{{ comment.date }}
+				{{ comment.created_at | toDate }}
 			</p>
-		</div>	
+		</div>
 	</div>
 </template>
 <script>
@@ -41,7 +41,10 @@
 	        limitTo: function (value) {
 	            if (!value) return '';
 	            return value.substring(0, 200 )+ '...';
-	        }
+	        },
+	        toDate: function (date) {
+	            return new Date(date).toLocaleDateString();
+            }
 	    }
 	}
 </script>
@@ -51,7 +54,7 @@
 		box-shadow: 0px 4px 16px rgba(110, 120, 130, 0.12);
 		border-radius: 8px;
 		margin-bottom: 20px;
-		padding: 20px 60px; 
+		padding: 20px 60px;
 		display: flex;
 	}
 	.users-wrap{

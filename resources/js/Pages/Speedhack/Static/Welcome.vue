@@ -25,11 +25,11 @@
             subtitle="Онлайн программы, чтобы изучить один конкретный навык"
         ></block-title>
 
-        <course-block></course-block>
+        <course-block :courses="courses"></course-block>
         <tab-course></tab-course>
         <teacher-slider></teacher-slider>
-        <news-slider></news-slider>
-        <comments-block></comments-block>
+        <news-slider :news="news"></news-slider>
+        <comments-block :comments="comments" :avg="avg"></comments-block>
         <form-request></form-request>
     </welcome-layout>
 </template>
@@ -46,7 +46,10 @@ import FormRequest from '@/Speedhack/Components/Details/FormRequest';
 
 export default {
     props: {
-
+        courses: Array,
+        comments: Array,
+        avg: Number,
+        news: Array,
     },
     components: {
         HeaderWelcome,

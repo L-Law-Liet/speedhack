@@ -26,12 +26,12 @@
             ></block-title>
             <div class="container">
                 <div class="raiting">
-                    <span class="number">4.2</span>
-                    <stars :count="stars"></stars>
-                    <span class="info">84 оценок</span>
+                    <span class="number">{{ avg }}</span>
+                    <stars :count="Math.round(2.9)"></stars>
+                    <span class="info">{{ comments.length }} оценок</span>
                 </div>
 
-                 <div class="commnets-wrap" v-if="commnets.length > 4">
+                 <div class="commnets-wrap" v-if="comments.length > 4">
                     <VueSlickCarousel  ref="carousel" v-bind="settings" @afterChange="currentSlider($event)">
                         <template v-for="comment in chunked">
                             <div class="group-slider">
@@ -55,7 +55,7 @@
 
 
                 <div class="commnets-wrap" v-else>
-                    <template v-for="item in commnets">
+                    <template v-for="item in comments">
                         <item-comment
                             :comment="item"
                             ></item-comment>
@@ -82,6 +82,10 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
+    props: {
+      comments: Array,
+        avg: Number,
+    },
     components: {
         HeaderWelcome,
         BlockTitle,
@@ -102,44 +106,6 @@ export default {
                 "slidesToShow": 1,
                 "slidesToScroll": 1,
             },
-            stars: 4,
-            commnets: [
-                {
-                    name: "Махметова Азиза 1",
-                    img: "/images/users/avatar-1.jpg",
-                    stars: 3,
-                    text: "Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая.",
-                    date: "03.12.20",
-                },
-                {
-                    name: "Махметова Азиза 2",
-                    img: "/images/users/avatar-1.jpg",
-                    stars: 2,
-                    text: "Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая.",
-                    date: "03.12.20",
-                },
-                {
-                    name: "Махметова Азиза 3",
-                    img: "/images/users/avatar-1.jpg",
-                    stars: 2,
-                    text: "Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая.",
-                    date: "03.12.20",
-                },
-                {
-                    name: "Махметова Азиза 4",
-                    img: "/images/users/avatar-1.jpg",
-                    stars: 2,
-                    text: "Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая.",
-                    date: "03.12.20",
-                },
-                {
-                    name: "Махметова Азиза 5",
-                    img: "/images/users/avatar-1.jpg",
-                    stars: 2,
-                    text: "Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая.",
-                    date: "03.12.20",
-                },
-           ]
         }
     },
     mounted() {
@@ -147,9 +113,9 @@ export default {
     },
     computed: {
         chunked(){
-            let count = this.commnets.length / 2;
+            let count = this.comments.length / 2;
             count = Math.round(count);
-            return _.chunk(this.commnets, count);
+            return _.chunk(this.comments, count);
         }
     },
     methods: {

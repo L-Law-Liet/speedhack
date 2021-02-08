@@ -3,27 +3,27 @@
 		<div class="container">
 			<div class="main-title">Наша программа курса</div>
 			<section class="lessons">
-				<template v-for="(lesson, index) in lessons">
+				<template v-for="(program, index) in programs">
 					<div class="item">
 						<b-button v-b-toggle="'collapse-' + index" class="content-wrap">
 							<div class="texts">
-								<span class="title">Раздел {{ index + 1 }} {{ lesson.title }}</span>
+								<span class="title">Раздел {{ index + 1 }} {{ program.title }}</span>
 								<div class="wrap">
-									<div class="icons"><img src="/images/icons/video.svg"> {{ lesson.count_lessons }} lessons & task</div>
-									<div class="icons"><img src="/images/icons/file-text.svg"> {{ lesson.homeworks }}  lessons & task</div>
-								</div>	
+									<div class="icons"><img src="/images/icons/video.svg"> {{ program.count }} lessons & task</div>
+									<div class="icons"><img src="/images/icons/file-text.svg"> {{ program.homeworks }}  lessons & task</div>
+								</div>
 							</div>
 							<div class="collapse-button"><img src="/images/icons/arraw-blue.svg"></div>
 						</b-button>
 						<b-collapse :id="'collapse-' + index">
 						    <ul class="lessons-list">
-						    	<template v-for="(item, i) in lesson.lessons">
+						    	<template v-for="(item, i) in program.lessons">
 						    		<li>
 						    			<span class="lesson_title"> <b>{{ index + 1}}.{{ i + 1 }}</b> {{ item.title }}</span>
 						    			<div class="fasts">
 						    				<div class="icons"><img src="/images/icons/clock.svg"> {{ item.min }} min</div>
-						    				<div class="icons"><img src="/images/icons/paperclip.svg"> {{ item.files }} file</div>
-						    			</div>	
+						    				<div class="icons"><img src="/images/icons/paperclip.svg"> {{ item.file }} file</div>
+						    			</div>
 						    		</li>
 						    	</template>
 						    </ul>
@@ -37,7 +37,7 @@
 <script>
 	export default {
 	    props: {
-	      lessons: Array,
+	      programs: Array,
 	    },
 	}
 </script>
@@ -65,7 +65,7 @@
 	}
 	.lessons .item:last-child{
 		margin-bottom: 0px;
-	}	
+	}
 	.content-wrap{
 		padding: 28px 50px;
 		display: flex;
@@ -79,7 +79,7 @@
 	.content-wrap.not-collapsed .collapse-button{
 		transform: rotateX(180deg);
 	}
-	
+
 	.content-wrap .title{
 		font-family: 'Inter', sans-serif;
 		font-weight: 600;
@@ -122,7 +122,7 @@
 		box-shadow: none;
 	}
 
-	
+
 
 	.lessons-list{
 		border-top: 1px solid #F1F2F2;

@@ -5,16 +5,16 @@
 				<div class="col-12 col-md-6">
 					<div class="content">
 						<h2 class="title">{{ course.title }}</h2>
-						<span class="subtitle">{{ course.subtitle }}</span>	
+						<span class="subtitle">{{ course.body }}</span>
 						<button class="btn-main" @click="showFormReguestModal">Начать курс</button>
 					</div>
 				</div>
 				<div class="col-12 col-md-6">
 					<div class="img">
-						<img :src="course.img">
+						<img :src="course.image">
 					</div>
 				</div>
-			</div>	
+			</div>
 			<div class="row">
 				<div class="col-12">
 					<ul class="facts">
@@ -38,7 +38,7 @@
 	    },
 	    data() {
 	        return {
-	           
+
 	        }
 	    },
 	    methods: {
@@ -58,14 +58,14 @@
 	    margin-top: 25px;
 	}
 	.banner-white .title{
-		font-family: "Inter-Bold", sans-serif;	
+		font-family: "Inter-Bold", sans-serif;
 		font-size: 58px;
 		line-height: 68px;
 		margin-bottom: 32px;
 		color: #050A1C;
 	}
 	.banner-white .subtitle{
-		font-family: "Inter", sans-serif;	
+		font-family: "Inter", sans-serif;
 		font-size: 18px;
 		line-height: 28px;
 		margin-bottom: 32px;
@@ -88,7 +88,7 @@
 		display: flex;
 		justify-content: space-between;
 		margin: 120px 0px;
-	}	
+	}
 	.facts li{
 		font-family: "Inter", sans-serif;
 		font-weight: 600;
@@ -129,6 +129,6 @@
 		.facts li{
 			margin-bottom: 30px;
 		}
-		   
+
 	}
 </style>

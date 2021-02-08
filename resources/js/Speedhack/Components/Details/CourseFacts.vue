@@ -7,7 +7,7 @@
 					<div class="col-12 col-md-4">
 						<span class="title">
 							<img src="/images/icons/blue-arr.svg">
-							{{ item }}
+							{{ item.body }}
 						</span>
 					</div>
 				</template>

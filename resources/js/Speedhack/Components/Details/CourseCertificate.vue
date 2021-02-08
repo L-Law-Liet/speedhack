@@ -4,14 +4,13 @@
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<div class="img">
-						<img src="/images/bg/certificate.png">
+						<img :src="certificate.image">
 					</div>
 				</div>
 				<div class="col-12 col-md-6">
 					<div class="content">
-						<span class="title">Вы получите сертификат</span>
-						<span class="text">После окончания курса вы получите Сертификат.
-							Данный сертификат будет подтверждением тому, что вы успешно прошли 3.5-месячную обучающую программу по курсу “General English” в онлайн-школе “SpeedHack”.</span>
+						<span class="title">{{ certificate.title }}</span>
+						<span class="text">{{certificate.body}}</span>
 						<button class="btn-main" @click="showFormReguestModal">Начать курс</button>
 					</div>
 				</div>
@@ -21,6 +20,9 @@
 </template>
 <script>
 	export default {
+	    props: {
+	        certificate: Object,
+        },
 	  methods: {
         showFormReguestModal(){
             this.$modal.show('formReguest');
@@ -69,7 +71,7 @@
 	.img{
 		width: 510px;
 		height: 360px;
-		
+
 	}
 	.img img{
 		width: 100%;

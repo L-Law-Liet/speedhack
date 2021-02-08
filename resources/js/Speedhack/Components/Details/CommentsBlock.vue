@@ -1,17 +1,17 @@
 <template>
 	<section class="comments-block">
-		<block-title 
+		<block-title
 	        title="Отзывы"
 	        subtitle="Предлагаем вам почитать отзывы наших учеников"
 	    ></block-title>
 	    <div class="container">
 	    	<div class="raiting">
-		    	<span class="number">4.2</span>
-		    	<stars :count="stars"></stars>
-		    	<span class="info">84 оценок</span>
+		    	<span class="number">{{avg}}</span>
+		    	<stars :count="avg"></stars>
+		    	<span class="info">{{comments.length}} оценок</span>
 		    </div>
 		    <div class="commnets-wrap">
-		    	<template v-for="item in commnets">
+		    	<template v-for="item in comments">
 		    		<item-comment
 		    			:comment="item"
 			    	 	></item-comment>
@@ -26,6 +26,10 @@
 	import Stars from '@/Speedhack/Components/Details/Stars';
 	import ItemComment from '@/Speedhack/Components/Details/ItemComment';
 	export default {
+	    props: {
+	        comments:Array,
+            avg: Number,
+        },
    	components: {
       	BlockTitle,
       	Stars,
@@ -33,25 +37,25 @@
     },
      data() {
         return {
-        	stars: 4,
-           	commnets: [
-           		{
-           			name: "Махметова Азиза",
-           			img: "/images/users/avatar-1.jpg",
-           			stars: 3,
-           			text: "Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая.",
-           			date: "03.12.20",
-           		},
-           		{
-           			name: "Махметова Азиза 2",
-           			img: "/images/users/avatar-1.jpg",
-           			stars: 2,
-           			text: "Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая.",
-           			date: "03.12.20",
-           		},
-           ]
+        	// stars: 4.5,
+           // 	commnets: [
+           // 		{
+           // 			name: "Махметова Азиза",
+           // 			img: "/images/users/avatar-1.jpg",
+           // 			stars: 3,
+           // 			text: "Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая.",
+           // 			date: "03.12.20",
+           // 		},
+           // 		{
+           // 			name: "Махметова Азиза 2",
+           // 			img: "/images/users/avatar-1.jpg",
+           // 			stars: 2,
+           // 			text: "Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая Этот курс прошел на Ураа! Отдельно ограмное спасибо моему учителю Айдын агай. Сейчас мой уровень английского языка стал намного лучше и программа у вас самая.",
+           // 			date: "03.12.20",
+           // 		},
+           // ]
 
-          
+
         }
 	},
 }

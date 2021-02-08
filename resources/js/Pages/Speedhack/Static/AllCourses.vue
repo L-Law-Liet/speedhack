@@ -10,27 +10,13 @@
         	<div class="tab-course">
 		  		<b-tabs
 		  			active-nav-item-class="active-tab-nav-item">
-			    	<b-tab active>
+			    	<b-tab v-for="category in categories">
 		      		<template #title>
-		        		<span class="circle"></span> Английский язык
+		        		<span class="circle"></span> {{ category.title }}
 		      		</template>
 			      		<div class="row top-40">
-			      			<template v-for="item in courses">
+			      			<template v-for="item in category.courses">
 			      				<div class="col-12  col-md-6 col-lg-4">
-			      					<item-course-block :course="item"></item-course-block>
-
-					            </div>
-			      			</template>
-			        	</div>
-	    			</b-tab>
-
-	    			<b-tab>
-		      		<template #title>
-		        		<span class="circle"></span> Казахский язык
-		      		</template>
-			      		<div class="row top-40">
-			      			<template v-for="item in courses2">
-			      				<div class="col-12 col-md-6 col-lg-4 ">
 			      					<item-course-block :course="item"></item-course-block>
 
 					            </div>
@@ -51,7 +37,7 @@
 
 	export default {
 	    props: {
-
+            categories: Array,
 	    },
 	    components: {
 	        HeaderWhite,

@@ -1,13 +1,13 @@
 <template>
-	<a href="/course" class="course-block">
+	<a :href="`/course/${course.id}`" class="course-block">
         <!-- <span class="text"> {{ course.text }}</span> -->
         <div class="wrap">
             <p class="title">{{ course.title }}</p>
             <div class="img">
-                 <img :src="course.img">
+                 <img :src="course.image">
             </div>
         </div>
-        <span class="text">{{ course.date }}</span>
+        <span class="text">{{ course.duration }}</span>
     </a>
 </template>
 <script>

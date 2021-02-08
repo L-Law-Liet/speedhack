@@ -69,6 +69,7 @@
                                         </td>
                                     </tr>
                                 </thead>
+
                                 <tbody>
                                     <tr v-for="(item, index) in collection" :key="item.id" :class="bulkItems[item.id] ? 'bg-bulk' : ''">
                                         <td class="bulk-checkbox">
@@ -77,11 +78,11 @@
                                             </label>
                                         </td>
 
-                                    <td>@{{ item.id }}</td>
+                                        <td>@{{ item.id }}</td>
                                         <td>@{{ item.name }}</td>
                                         <td>@{{ item.phone }}</td>
                                         <td>@{{ item.email }}</td>
-                                        <td>@{{ item.status_id }}</td>
+                                        <td>@{{ item.status.name }}</td>
                                         
                                         <td>
                                             <div class="row no-gutters">

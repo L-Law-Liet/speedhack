@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-//            CourseCategorySeeder::class,
+            CourseCategorySeeder::class,
             CourseSeeder::class,
             CertificateSeeder::class,
             NewsSeeder::class,
@@ -24,6 +24,9 @@ class DatabaseSeeder extends Seeder
             FactSeeder::class,
             ProgramSeeder::class,
             LessonSeeder::class,
+//            TestSeeder::class,
+//            QuestionSeeder::class,
+//            OptionSeeder::class,
         ]);
         $this->call(ApplicationStatusSeeder::class);
     }

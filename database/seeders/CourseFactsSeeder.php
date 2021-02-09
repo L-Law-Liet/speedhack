@@ -14,6 +14,44 @@ class CourseFactsSeeder extends Seeder
      */
     public function run()
     {
-        CourseFacts::factory()->count(120)->create();
+//        CourseFacts::factory()->count(120)->create();
+        CourseFacts::factory()->createMany([
+            [
+                'body' => 'Учись не выходя из дома',
+                'course_id' => 1
+            ],
+            [
+                'body' => 'Уникальное програмное обучение',
+                'course_id' => 1
+            ],
+            [
+                'body' => 'Доступная цена и акции',
+                'course_id' => 1
+            ],
+            [
+                'body' => 'Учись не выходя из дома',
+                'course_id' => 2
+            ],
+            [
+                'body' => 'Уникальное програмное обучение',
+                'course_id' => 2
+            ],
+            [
+                'body' => 'Доступная цена и акции',
+                'course_id' => 2
+            ],
+            [
+                'body' => 'Учись не выходя из дома',
+                'course_id' => 3
+            ],
+            [
+                'body' => 'Уникальное програмное обучение',
+                'course_id' => 3
+            ],
+            [
+                'body' => 'Доступная цена и акции',
+                'course_id' => 3
+            ],
+        ]);
     }
 }

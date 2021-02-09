@@ -14,6 +14,14 @@ class LessonSeeder extends Seeder
      */
     public function run()
     {
-        Lesson::factory()->count(800)->create();
+        Lesson::factory()->count(80)->create();
+//        Lesson::factory()->createMany([
+//            [
+//                'title' => 'Present Simple',
+//                'min' => 4,
+//                'file' => 3,
+//                'program_id' => 1
+//            ],
+//        ]);
     }
 }

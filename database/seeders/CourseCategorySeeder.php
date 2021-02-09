@@ -14,6 +14,10 @@ class CourseCategorySeeder extends Seeder
      */
     public function run()
     {
-        CourseCategory::factory()->count(4)->create();
+//        CourseCategory::factory()->count(4)->create();
+        CourseCategory::factory()->createMany([
+            ['title' => 'Английский язык'],
+            ['title' => 'Казахский язык'],
+        ]);
     }
 }

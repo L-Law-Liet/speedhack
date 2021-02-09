@@ -10,6 +10,7 @@ use App\Http\Requests\Admin\Application\StoreApplication;
 use App\Http\Requests\Admin\Application\UpdateApplication;
 use App\Models\Application;
 use App\Models\ApplicationStatus;
+use App\Models\User;
 use Brackets\AdminListing\Facades\AdminListing;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -20,6 +21,8 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Hash;
+use SendEmail;
 
 class ApplicationsController extends Controller
 {
@@ -138,7 +141,8 @@ class ApplicationsController extends Controller
      */
     public function update(UpdateApplication $request, Application $application)
     {
-
+        $user_count = User::where('email', $application->email)->count();
+       
         // Sanitize input
         $sanitized = $request->getSanitized();
         $status_id = ApplicationStatus::where('name', $request->status['name'])->first()->id;
@@ -148,18 +152,32 @@ class ApplicationsController extends Controller
         $application->status_id = $status_id;
         $application->save();
 
+        if($application->status->name == "Успешно"){
+            $user_count = User::where('email', $application->email)->count();
+
+            if($user_count == 0){
+                $password = SendEmail::generatePassword(8);
+                SendEmail::sendLoginPassword($application->email, $application->email, $password);
+
+                $user =  User::create([
+                    'email' => $application->email,
+                    'phone' => $application->phone,
+                    'name' => $application->name,
+                    'password' => Hash::make($password),
+                ]);
+
+            }else{
+               SendEmail::sendError($application->email); 
+            }
+            
+        }
+
         if ($request->ajax()) {
             return [
                 'redirect' => url('admin/applications'),
                 'message' => trans('brackets/admin-ui::admin.operation.succeeded'),
             ];
-        }   
-
-
-        if($application->status->name == "Успешно"){
-            $password = SendEmail::generatePassword(8);
-            SendEmail::sendLoginPassword($application->email, $application->email, $password);
-        }
+        } 
 
         return redirect('admin/applications');
     }

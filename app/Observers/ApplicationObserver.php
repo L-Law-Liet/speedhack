@@ -26,10 +26,10 @@ class ApplicationObserver
      */
     public function updated(Application $application)
     {
-        if($application->status->name == "Успешно"){
-            $password = SendEmail::generatePassword(6);
-            SendEmail::sendLoginPassword($application->email, $application->email, $password);
-        }
+        // if($application->status->name == "Успешно"){
+        //     $password = SendEmail::generatePassword(6);
+        //     SendEmail::sendLoginPassword($application->email, $application->email, $password);
+        // }
     }
 
     /**

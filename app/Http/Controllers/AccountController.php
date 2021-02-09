@@ -87,4 +87,8 @@ class AccountController extends Controller
         ]);
     }
 
+    public function trial()
+    {   
+       return Inertia::render('Speedhack/Student/TrialLesson');
+    }
 }

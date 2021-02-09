@@ -24,4 +24,16 @@ class SendEmail {
         $password = substr(str_shuffle($chars), 0,  $length);
         return  $password;
     }
+
+    public function sendError($email)
+    {   
+        $text = 'Вы уже есть в базе если забыли пароль можете восстановить';
+
+        Mail::raw($text, function ($message) use ($email){
+            $message->to($email);
+            $message->subject('Speedhack');
+        });
+        
+        return 'ok';
+    }
 }
